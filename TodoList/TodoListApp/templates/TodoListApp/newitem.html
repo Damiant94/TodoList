@@ -9,6 +9,7 @@
     <main class="main main-new-item">
       <section class="new-todo-item">
         <form class="new-item-form" action="">
+          {% csrf_token %}
           <label for="name">Activity name:</label>
           <input type="text" class="todo-item-name-input" name="name">
           <label for="details">Details:</label>
@@ -18,8 +19,9 @@
           <input class="submit" type="submit" value="Add">
         </form>
       </section>
-      <a href="{% url 'login' %}">Back to index</a>
       <a href="{% url 'items' %}">Show list of items</a>
+      <br>
+      <a href="{% url 'logout' %}">Log Out</a>
     </main>
     
   </div>

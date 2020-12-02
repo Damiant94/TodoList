@@ -74,6 +74,7 @@ a {
 
 .main-new-item .new-todo-item {
   height: auto;
+  padding: 40px;
 }
 
 .main-items .todo-item .todo-item-name,
