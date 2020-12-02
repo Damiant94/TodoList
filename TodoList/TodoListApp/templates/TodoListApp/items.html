@@ -8,20 +8,26 @@
     </header>
     <main class="main">
       <section class="todo-item">
-        <h2 class="todo-item-name">1 todo item</h2>
-        <p class="details">Details about 1 todo item</p>
+        <label for="name">Activity name:</label>
+        <div class="x-wrapper">
+          <i class="far fa-times-circle"></i>
+        </div>
+        <h2 name="name" class="todo-item-name">1 todo item</h2>
+        <label for="details">Details:</label>
+        <p class="details" name="details">Details about 1 todo item</p>
         <p class="date">date</p>
       </section>
       <section class="todo-item">
-        <h2 class="todo-item-name">2 todo item</h2>
-        <p class="details">Details about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo item</p>
+        <label for="name">Activity name:</label>
+        <div class="x-wrapper">
+          <i class="far fa-times-circle"></i>
+        </div>
+        <h2 name="name" class="todo-item-name">2 todo item</h2>
+        <label for="details">Details:</label>
+        <p name="details" class="details">Details about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo item</p>
         <p class="date">date</p>
       </section>
-      <section class="todo-item">
-        <h2 class="todo-item-name">3 todo item</h2>
-        <p class="details">Details about 3 todo item</p>
-        <p class="date">date</p>
-      </section>
+
       <a href="{% url 'login' %}">Back to index</a>
       <a href="{% url 'newitem' %}">Add new item</a>
 
