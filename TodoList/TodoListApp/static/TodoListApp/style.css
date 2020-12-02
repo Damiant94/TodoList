@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-a {
-  color: #fff;
-}
-
 html {
   overflow-y: scroll;
 }
@@ -16,6 +12,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+a {
   color: #fff;
 }
 
@@ -29,12 +30,9 @@ body {
   background: linear-gradient(to right bottom, #02041d, #020957);
   width: 60vw;
   min-width: 600px;
-  /* height: calc(100vh - 20px); */
   min-height: 930px;
   padding: 50px;
   margin: 10px;
-  /* margin-left: auto;
-  margin-right: auto; */
 }
 
 .header {
@@ -46,10 +44,11 @@ body {
   text-align: center;
   /* border: 1px solid white; */
   margin-bottom: 20px;
+  color: rgb(240, 217, 217);
 }
 
 .header h1 {
-  color: #fff;
+  /* color: #fff; */
   font-size: 26px;
   /* border: 1px solid white; */
 }
@@ -60,8 +59,8 @@ body {
   align-items: center;
 }
 
-.main .todo-item,
-.main .new-todo-item {
+.main-items .todo-item,
+.main-new-item .new-todo-item {
   display: flex;
   flex-direction: column;
   color: #fff;
@@ -73,39 +72,76 @@ body {
   border-radius: 20px;
 }
 
-.main .new-todo-item {
-  height: 323px;
+.main-new-item .new-todo-item {
+  height: auto;
 }
 
-.main .todo-item .todo-item-name,
-.main .new-todo-item .todo-item-name-input {
+.main-items .todo-item .todo-item-name,
+.main-new-item .new-todo-item .todo-item-name-input {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   height: 40px;
   text-align: center;
   font-size: 20px;
+  padding: 5px;
+  outline: none;
 }
 
-.main .todo-item .details,
-.main .new-todo-item .todo-item-details-input {
-  border: 1px solid green;
+.main-items .todo-item label {
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+
+.main-new-item .new-todo-item .todo-item-name-input {
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.main-new-item .new-todo-item label {
+  font-size: 18px;
+  margin-bottom: 3px;
+}
+
+.main-new-item .new-todo-item .submit {
+  width: 200px;
+  height: 40px;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.main-items .todo-item .details,
+.main-new-item .new-todo-item .todo-item-details-input {
+  border: 3px solid rgb(233, 193, 193);
+  border-radius: 5px;
   overflow-y: auto;
   height: 110px;
-  padding: 20px;
+  padding: 10px;
   text-align: justify;
   resize: none;
   margin-bottom: 10px;
   font-size: 16px;
+  outline: none;
 }
 
-.todo-item {
+.main-new-item .new-todo-item .todo-item-details-input {
+  border: 3px solid #fff;
+  border-radius: 0;
+
+}
+
+.main-items .todo-item .details {
+  font-size: 18px;
+}
+
+.main-items .todo-item {
   position: relative;
 }
 
-.todo-item .x-wrapper {
+.main-items .todo-item .x-wrapper {
   position: absolute;
   right: 0;
   top: 0;
@@ -116,31 +152,33 @@ body {
   cursor: pointer;
 }
 
-.todo-item .x-wrapper:hover {
-  color: grey;
+.main-items .todo-item .x-wrapper:hover {
+  color: rgb(233, 193, 193);
 }
 
-
-.main .date {
+.main-items .date {
   text-align: right;
 }
 
-.main .date-input {
+.main-new-item .date-input {
   margin-bottom: 10px;
   height: 30px;
+  padding: 10px;
+  outline: none;
 }
 
-.main .submit {
+.main-new-item .submit-new-item {
   width: 40%;
+  outline: none;
 }
 
-.new-todo-item form {
+.main-new-item .new-todo-item form {
   display: flex;
   flex-direction: column;
 }
 
-.main .login,
-.main .register {
+.main-login .login-form,
+.main-register .register-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -149,25 +187,28 @@ body {
   margin-bottom: 10px;
 }
 
-.main .login label,
-.main .register label {
-  font-size: 23px;
-  margin-bottom: 5px;
+.main-login .login-form label,
+.main-register .register-form label {
+  font-size: 18px;
+  margin-bottom: 3px;
 }
 
-.main .login input,
-.main .register input {
+.main-login .login-form input,
+.main-register .register-form input {
   width: 100%;
-  height: 50px;
-  font-size: 30px;
-  margin-bottom: 10px;
+  height: 40px;
+  font-size: 20px;
+  margin-bottom: 12px;
   padding: 10px;
+  outline: none;
 }
 
-.main .login .submit,
-.main .register .submit {
+.main-login .login-form .submit,
+.main-register .register-form .submit {
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 18px;
 }
+
+
 
 
