@@ -1,0 +1,23 @@
+{% extends "TodoListApp/layout.html" %}
+
+{% block body %}
+
+  <div class="container">
+    <header class="header">
+      <h1>Adding new item</h1>
+    </header>
+    <main class="main">
+      <section class="new-todo-item">
+        <input type="text" class="todo-item-name-input">
+        <textarea class="todo-item-details-input" name="" id=""></textarea>
+        <input class="date-input" type="datetime-local" name="date" id="">
+        <input class="submit" type="submit" value="Add">
+      </section>
+      <a href="{% url 'login' %}">Back to index</a>
+      <a href="{% url 'items' %}">Show list of items</a>
+    </main>
+    
+  </div>
+
+
+{% endblock %}

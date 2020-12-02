@@ -1,0 +1,32 @@
+{% extends "TodoListApp/layout.html" %}
+
+{% block body %}
+
+  <div class="container">
+    <header class="header">
+      <h1>Here is a list of your activities:</h1>
+    </header>
+    <main class="main">
+      <section class="todo-item">
+        <h2 class="todo-item-name">1 todo item</h2>
+        <p class="details">Details about 1 todo item</p>
+        <p class="date">date</p>
+      </section>
+      <section class="todo-item">
+        <h2 class="todo-item-name">2 todo item</h2>
+        <p class="details">Details about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo item</p>
+        <p class="date">date</p>
+      </section>
+      <section class="todo-item">
+        <h2 class="todo-item-name">3 todo item</h2>
+        <p class="details">Details about 3 todo item</p>
+        <p class="date">date</p>
+      </section>
+      <a href="{% url 'login' %}">Back to index</a>
+      <a href="{% url 'newitem' %}">Add new item</a>
+
+    </main>
+  </div>
+
+
+{% endblock %}
