@@ -11,11 +11,11 @@
         <form class="new-item-form" action="{% url 'newitem' %}" method="POST">
           {% csrf_token %}
           <label for="name">Activity name:</label>
-          <input type="text" class="todo-item-name-input" name="name">
+          <input type="text" class="todo-item-name-input" name="name" required>
           <label for="details">Details:</label>
-          <textarea class="todo-item-details-input" name="details" id=""></textarea>
+          <textarea class="todo-item-details-input" name="details" required></textarea>
           <label for="date">Date:</label>
-          <input class="date-input" type="date" name="date" id="">
+          <input class="date-input" type="date" name="date" required>
           <input class="submit" type="submit" value="Add">
         </form>
       </section>

@@ -47,13 +47,8 @@ def newitem(request):
     details = request.POST["details"]
     date = request.POST["date"]
     item = Item(user=request.user, name=name, details=details, date=date)
-    # try:
     item.is_active = True
     item.save()
-    # except Exception as e:
-      # print(e)
-    # return render(request, "TodoListApp/newitem.html")
-    # return render(request, "TodoListApp/items.html")
     return HttpResponseRedirect(reverse("items"))
 
 
