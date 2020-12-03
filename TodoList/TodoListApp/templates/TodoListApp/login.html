@@ -8,10 +8,6 @@
     </header>
     <main class="main main-login">
 
-      {% if message %}
-        <div>{{ message }}</div>
-      {% endif %}
-
       <form class="login-form" action="{% url 'login' %}" method="post">
         {% csrf_token %}
         <label for="login">Login:</label>
@@ -22,6 +18,9 @@
       </form>
       Doesn't have an account yet? <a href="{% url 'register' %}"> Click here to register</a>
       <br><br>
+      {% if message %}
+        <div>{{ message }}</div>
+      {% endif %}
       <!-- <a href="{% url 'newitem' %}">Add new item</a> -->
       <!-- <a href="{% url 'items' %}">Show list of items</a> -->
     </main>

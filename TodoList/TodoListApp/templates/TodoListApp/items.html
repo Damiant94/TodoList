@@ -7,26 +7,29 @@
       <h1>Here is a list of your activities:</h1>
     </header>
     <main class="main main-items">
-      <section class="todo-item">
-        <!-- <label for="name">Activity name:</label> -->
-        <div class="x-wrapper">
-          <i class="far fa-times-circle"></i>
-        </div>
-        <h2 name="name" class="todo-item-name">1 todo item</h2>
-        <label for="details">Details:</label>
-        <p class="details" name="details">Details about 1 todo item</p>
-        <p class="date">date</p>
-      </section>
-      <section class="todo-item">
-        <!-- <label for="name">Activity name:</label> -->
-        <div class="x-wrapper">
-          <i class="far fa-times-circle"></i>
-        </div>
-        <h2 name="name" class="todo-item-name">2 todo item</h2>
-        <label for="details">Details:</label>
-        <p name="details" class="details">Details about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo itemDetails about 2 todo item</p>
-        <p class="date">date</p>
-      </section>
+
+
+      {% if items %}
+        {% for item in items %}
+
+          <section class="todo-item">
+            <!-- <label for="name">Activity name:</label> -->
+            <div class="x-wrapper">
+              <i class="far fa-times-circle"></i>
+            </div>
+            <h2 name="name" class="todo-item-name">{{ item.name }}</h2>
+            <label for="details">Details:</label>
+            <p class="details" name="details">{{ item.details}}</p>
+            <p class="date">{{ item.date }}</p>
+          </section>
+
+        {% endfor %}
+      
+      {% else %}
+        <section class="empty-list">
+          Your list is empty
+        </section>
+      {% endif %}
 
       <a href="{% url 'newitem' %}">Add new item</a>
       <br>

@@ -8,14 +8,14 @@
     </header>
     <main class="main main-new-item">
       <section class="new-todo-item">
-        <form class="new-item-form" action="">
+        <form class="new-item-form" action="{% url 'newitem' %}" method="POST">
           {% csrf_token %}
           <label for="name">Activity name:</label>
           <input type="text" class="todo-item-name-input" name="name">
           <label for="details">Details:</label>
           <textarea class="todo-item-details-input" name="details" id=""></textarea>
           <label for="date">Date:</label>
-          <input class="date-input" type="datetime-local" name="date" id="">
+          <input class="date-input" type="date" name="date" id="">
           <input class="submit" type="submit" value="Add">
         </form>
       </section>
