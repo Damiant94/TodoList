@@ -7,6 +7,7 @@ urlpatterns = [
     path("items", views.items, name="items"),
     path("newitem", views.newitem, name="newitem"),
     path("register", views.signup, name="register"),
-    path("logout", views.logout_view, name="logout")
+    path("logout", views.logout_view, name="logout"),
+    path("itemslist", views.itemslist, name="itemslist")
     # url(r'^signup/$', core_views.signup, name='signup'),
 ]

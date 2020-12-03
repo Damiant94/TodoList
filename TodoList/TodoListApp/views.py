@@ -1,10 +1,10 @@
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.shortcuts import render, redirect
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from django.urls import reverse
 from .forms import UserCreateForm
 from .models import Item
-from django.contrib.auth import get_user_model
+import time
 
 # Create your views here.
 def login_view(request):
@@ -35,9 +35,28 @@ def logout_view(request):
 def items(request):
   if not request.user.is_authenticated:
     return HttpResponseRedirect(reverse("login"))
+    
   return render(request, "TodoListApp/items.html", {
     "items": Item.objects.select_related().filter(user=request.user.id)
   })
+
+
+def itemslist(request):
+  if not request.user.is_authenticated:
+    return HttpResponseRedirect(reverse("login"))
+
+  start = int(request.GET.get("start") or 0)
+  end = int(request.GET.get("end") or (start + 2))
+
+  items = list(Item.objects.select_related().filter(user=request.user.id).values())
+  data = items[start:end+1]
+
+  time.sleep(1)
+
+  return JsonResponse({
+    "itemslist": data
+  })
+
 
 def newitem(request):
   if not request.user.is_authenticated:
