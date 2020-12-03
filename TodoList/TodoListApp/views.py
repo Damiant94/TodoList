@@ -70,7 +70,6 @@ def newitem(request):
     item.save()
     return HttpResponseRedirect(reverse("items"))
 
-
   else:
     return render(request, "TodoListApp/newitem.html")
 
@@ -90,3 +89,6 @@ def signup(request):
   else:
     form = UserCreateForm()
   return render(request, "TodoListApp/register.html", {'form': form})
+  
+  def delete(request):
+    return null
