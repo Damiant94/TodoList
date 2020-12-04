@@ -35,7 +35,20 @@ def logout_view(request):
 def items(request):
   if not request.user.is_authenticated:
     return HttpResponseRedirect(reverse("login"))
-    
+
+  if request.method == "POST":
+    if (request.POST.get("add-10-items")):
+      for i in range(10):
+        item = Item(user=request.user, name=f"name{i}", details=f"details{i}", date="2018-07-22")
+        item.is_active = True
+        item.save()
+      return HttpResponseRedirect(reverse("items"))
+
+    if (request.POST.get("confirm-delete-button")):
+      list_to_remove = request.POST.get("confirm-delete-button").split(",")
+      Item.objects.filter(id__in = list_to_remove).delete()
+      return HttpResponseRedirect(reverse("items"))
+      
   return render(request, "TodoListApp/items.html", {
     "items": Item.objects.select_related().filter(user=request.user.id)
   })
@@ -89,6 +102,3 @@ def signup(request):
   else:
     form = UserCreateForm()
   return render(request, "TodoListApp/register.html", {'form': form})
-  
-  def delete(request):
-    return null

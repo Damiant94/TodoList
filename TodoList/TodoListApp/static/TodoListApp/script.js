@@ -1,32 +1,26 @@
 
-// document.querySelector(".main-items").addEventListener("click", function(e) {
-//   if(e.target && e.target.nodeName === "I") {
-//     e.target.parentElement.parentElement.style.display = "none";
-//    }
-// })
-
-
-
 // Start with first item
 let counter = 1;
 
 // Load posts 3 items at a time
-const quantity = 3;
+var quantity = 3;
 
 // When DOM loads, render the first 3 items
-document.addEventListener('DOMContentLoaded', load);
+document.addEventListener('DOMContentLoaded', load(quantity));
 var empty = true;
+var removed = [];
+delete_item_listener();
+
 
 // If scrolled to bottom, load the next 3 items
 window.onscroll = () => {
   if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-      load();
+    load(quantity);
   }
 };
 
 // Load next set of items
-function load() {
-  delete_item_listener();
+function load(quantity) {
 
   // Set start and end item numbers, and update counter
 
@@ -63,7 +57,7 @@ function add_item(content) {
   item.className = "todo-item";
   item.innerHTML =     
     `<p hidden class="id">${content.id}</p>
-    <div class="x-wrapper">
+    <div name="delete-button" value="${content.id}" class="x-wrapper">
       <i class="far fa-times-circle"></i>
     </div>
     <h2 name="name" class="todo-item-name">${content.name}</h2>
@@ -81,9 +75,22 @@ function delete_item_listener() {
       const itemElement = e.target.parentElement.parentElement;
 
       const item_id = itemElement.querySelector('.id').innerHTML;
+      removed.push(item_id);
 
       itemElement.style.animationPlayState = 'running';
       itemElement.addEventList;
+
+      // document.querySelectorAll(".x-wrapper").style.pointerEvents = 'none';
+      for (item of document.querySelectorAll(".x-wrapper")) {
+        item.style.pointerEvents = 'none';
+      }
+
+      setTimeout(() => {
+        let todoitemsLen = document.querySelector(".main-items").querySelectorAll(".todo-item").length
+        if (todoitemsLen === 3) {
+          load(1);
+        };
+      }, 0);
 
       setTimeout(() => {
         itemElement.innerHTML = '';
@@ -91,11 +98,20 @@ function delete_item_listener() {
 
       setTimeout(() => {
         itemElement.remove();
-      }, 2000)
+      }, 2000);
 
+      setTimeout(() => {
+        for (item of document.querySelectorAll(".x-wrapper")) {
+          item.style.pointerEvents = 'auto';
+        }
+      }, 2000);
+      
+    }
+    
 
-
-      // e.target.parentElement.parentElement.style.display = "none";
+    let confirm_button = document.querySelector(".confirm-delete-button")
+    if (removed.length > 0){
+      confirm_button.value = removed.join();
     }
   });
 }
