@@ -38,7 +38,7 @@ def items(request):
 
   if request.method == "POST":
     if (request.POST.get("add-10-items")):
-      for i in range(10):
+      for i in [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]:
         item = Item(user=request.user, name=f"name{i}", details=f"details{i}", date="2018-07-22")
         item.is_active = True
         item.save()
@@ -62,6 +62,7 @@ def itemslist(request):
   end = int(request.GET.get("end") or (start + 2))
 
   items = list(Item.objects.select_related().filter(user=request.user.id).values())
+  items.reverse()
   data = items[start:end+1]
 
   time.sleep(1)

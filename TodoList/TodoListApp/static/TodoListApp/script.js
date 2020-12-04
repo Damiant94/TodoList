@@ -1,6 +1,6 @@
 
 // Start with first item
-let counter = 1;
+let counter = 0;
 
 // Load posts 3 items at a time
 var quantity = 3;
@@ -80,7 +80,6 @@ function delete_item_listener() {
       itemElement.style.animationPlayState = 'running';
       itemElement.addEventList;
 
-      // document.querySelectorAll(".x-wrapper").style.pointerEvents = 'none';
       for (item of document.querySelectorAll(".x-wrapper")) {
         item.style.pointerEvents = 'none';
       }
@@ -94,6 +93,7 @@ function delete_item_listener() {
 
       setTimeout(() => {
         itemElement.innerHTML = '';
+        document.querySelector(".confirm-delete-button").disabled = false;
       }, 1500);
 
       setTimeout(() => {
@@ -105,7 +105,6 @@ function delete_item_listener() {
           item.style.pointerEvents = 'auto';
         }
       }, 2000);
-      
     }
     
 

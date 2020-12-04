@@ -10,7 +10,7 @@
       <a href="{% url 'logout' %}">Log Out</a>
       <form action="{% url 'items' %}" method="post">
         {% csrf_token %}
-        <button class="confirm-delete-button" value="" name="confirm-delete-button">confirm</button>
+        <button disabled class="confirm-delete-button" value="" name="confirm-delete-button">confirm</button>
         <button class="add-10-items" value="add-10-items" name="add-10-items">add 10 items</button>
       </form>
       

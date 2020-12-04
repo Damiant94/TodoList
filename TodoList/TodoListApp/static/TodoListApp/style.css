@@ -59,10 +59,6 @@ a {
   align-items: center;
 }
 
-.main-items {
-  flex-direction: column-reverse;
-}
-
 .main-items .todo-item,
 .main-new-item .new-todo-item {
   display: flex;
