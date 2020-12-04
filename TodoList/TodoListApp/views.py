@@ -6,6 +6,9 @@ from .forms import UserCreateForm
 from .models import Item
 import time
 
+# import logging
+# logger = logging.getLogger(__name__)
+
 # Create your views here.
 def login_view(request):
   if request.method == "POST":
@@ -19,7 +22,6 @@ def login_view(request):
       return render(request, "TodoListApp/login.html", {
         "message": "Invalid credentials."
       })
-
   return render(request, "TodoListApp/login.html")
 
 
@@ -63,6 +65,7 @@ def itemslist(request):
 
   items = list(Item.objects.select_related().filter(user=request.user.id).values())
   items.reverse()
+
   data = items[start:end+1]
 
   time.sleep(1)

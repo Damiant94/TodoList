@@ -23,7 +23,6 @@ window.onscroll = () => {
 function load(quantity) {
 
   // Set start and end item numbers, and update counter
-
   const start = counter;
   const end = start + quantity - 1;
   counter = end + 1;
