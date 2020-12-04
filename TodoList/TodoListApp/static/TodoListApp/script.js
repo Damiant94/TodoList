@@ -70,7 +70,7 @@ function add_item(content) {
 };
 
 function delete_item_listener() {
-  document.querySelector(".main-items").addEventListener("click", function(e) {
+  document.querySelector(".main").addEventListener("click", function(e) {
     if(e.target && e.target.nodeName === "I") {
       const itemElement = e.target.parentElement.parentElement;
 

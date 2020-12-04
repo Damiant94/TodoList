@@ -17,7 +17,3 @@ class Item(models.Model):
   def __str__(self):
     return f"{self.name}: {self.details}. Date: {self.date}"
   
-  # def create(cls, user, name, details, date):
-  #   item = cls(user=user, name=name, details=details, date=date)
-  #   return item
-
