@@ -13,7 +13,7 @@ Web application, which provides Todo List.
 Project will be created with:
 * HTML5 / CSS3 / JavaScript / React
 * Python / Django
-* SQLite
+* SQLite3
 
 ## Features
 My Todo List app will contain features such as:
