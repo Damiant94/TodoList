@@ -25,7 +25,7 @@ def login_view(request):
 
 def logout_view(request):
   if not request.user.is_authenticated:
-    return render(request, "TodoListApp/login.html")
+    return HttpResponseRedirect(reverse("login"))
 
   logout(request)
   return render(request, "TodoListApp/login.html", {
@@ -75,6 +75,7 @@ def itemslist(request):
 def newitem(request):
   if not request.user.is_authenticated:
     return HttpResponseRedirect(reverse("login"))
+  
   if request.method == "POST":
     name = request.POST["name"]
     details = request.POST["details"]
@@ -84,8 +85,7 @@ def newitem(request):
     item.save()
     return HttpResponseRedirect(reverse("items"))
 
-  else:
-    return render(request, "TodoListApp/newitem.html")
+  return render(request, "TodoListApp/newitem.html")
 
 
 def signup(request):

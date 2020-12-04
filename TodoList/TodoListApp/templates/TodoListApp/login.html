@@ -1,10 +1,10 @@
-{% extends "TodoListApp/layout.html" %}
+{% extends "TodoListApp/base.html" %}
 
 {% block body %}
 
   <div class="container container-login">
     <header class="header">
-      <h1>Welcome to my index page of Todo List App. App is in production right now..</h1>
+      <h1>Welcome to my Todo List App. <br>Please log in.</h1>
     </header>
     <main class="main main-login">
 
@@ -21,8 +21,7 @@
       {% if message %}
         <div>{{ message }}</div>
       {% endif %}
-      <!-- <a href="{% url 'newitem' %}">Add new item</a> -->
-      <!-- <a href="{% url 'items' %}">Show list of items</a> -->
+
     </main>
   </div>
 

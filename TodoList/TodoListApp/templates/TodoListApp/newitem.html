@@ -1,4 +1,4 @@
-{% extends "TodoListApp/layout.html" %}
+{% extends "TodoListApp/base.html" %}
 
 {% block body %}
 
@@ -16,7 +16,8 @@
           <textarea class="todo-item-details-input" name="details" required></textarea>
           <label for="date">Date:</label>
           <input class="date-input" type="date" name="date" required>
-          <input class="submit" type="submit" value="Add">
+          <button class="submit">Add</button>
+          <!-- <input class="submit" type="submit" value="Add"> -->
         </form>
       </section>
       <a href="{% url 'items' %}">Show list of items</a>
