@@ -11,7 +11,7 @@ Web application, which provides Todo List.
 	
 ## Technologies
 Project will be created with:
-* HTML5 / CSS3 / JavaScript / React
+* HTML / CSS / JavaScript / React
 * Python / Django
 * SQLite
 
