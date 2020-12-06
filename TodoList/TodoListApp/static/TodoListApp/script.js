@@ -2,7 +2,7 @@
 // Start with first item
 let counter = 0;
 
-// Load posts 3 items at a time
+// Load 3 items at a time
 const QUANTITY_TO_ADD_ON_SCROLL = 3;
 
 var isListEmpty;
@@ -13,7 +13,6 @@ var enabledActions = true;
 const HIDE_ANIMATION_DURATION_OPACITY = 1500
 const HIDE_ANIMATION_DURATION_ALL = 2000;
 
-
 document.addEventListener('DOMContentLoaded', () => {
 
   setTimeout(() => { 
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     deleteItemListener()
 
     window.onresize = () => {
-      console.log("resize!")
       const resizeWindow = window.onresize
       window.onresize = "none"
       if (areMoreItems && enabledActions && checkIfIsFreeHeight()) {
@@ -36,15 +34,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     window.onscroll = () => {
-      if (areMoreItems && enabledActions && isScrolledToBottom()) {
-        load(QUANTITY_TO_ADD_ON_SCROLL);
-      }
+      if (areMoreItems && enabledActions && isScrolledToBottom()) load(QUANTITY_TO_ADD_ON_SCROLL);
+      else if (checkIfIsFreeHeight()) {
+        const scroll = window.onscroll;
+        window.onscroll = "none";
+        load(getQuantityOfItemsToAdd())
+        setTimeout(() => {
+          window.onscroll = scroll
+        }, 3000);
+      } 
     };
 
     confirmDeleteButtonListener()
-
     // END OF SETTING LISTENERS
-
 
     load(QUANTITY_TO_ADD_ON_SCROLL)
     setTimeout(() => {
@@ -66,18 +68,6 @@ function confirmDeleteButtonListener() {
 function isScrolledToBottom() {
   return window.innerHeight + window.scrollY >= document.body.offsetHeight
 }
-
-// dummy function
-document.addEventListener("click", (event) => {
-  console.log("click")
-  // console.log(window.scrollY)
-  // console.log(window.innerHeight)
-  // console.log(document.body.offsetHeight)
-  // console.log(window.onresize)
-  console.log(window.scrollY)
-  window.scroll(0, 0)
-
-})
 
 function parseInt10(string) {
   return parseInt(string, 10);
@@ -104,11 +94,11 @@ function getHeightOfOtherElements() {
   return 2 * containerPadding + 2 * containerMargin + headerOuterHeight;
 }
 
-function getBodyMinOuterHeight() {
-  const containerStyles = getComputedStyles("container");
-  const containerMinHeight = parseInt(containerStyles.minHeight, 10);
-  return containerMinHeight + 2 * parseInt(containerStyles.margin, 10);
-}
+// function getBodyMinOuterHeight() {
+//   const containerStyles = getComputedStyles("container");
+//   const containerMinHeight = parseInt(containerStyles.minHeight, 10);
+//   return containerMinHeight + 2 * parseInt(containerStyles.margin, 10);
+// }
 
 // function hasBodyMinHeight() {
 //   return document.body.offsetHeight === getBodyMinOuterHeight();
@@ -142,14 +132,9 @@ function getTodoItemQuantity() {
 
 function load(quantity) {
 
-  // Set start and end item numbers, and update counter
   const start = counter;
   const end = start + quantity - 1;
   counter = end + 1;
-
-  // count child elements of .main-items and print it
-  const itemsNr = getTodoItemQuantity()
-  console.log({itemsNr})
 
   fetch(`itemslist?start=${start}&end=${end}`)
   .then(response => response.json())
@@ -158,17 +143,10 @@ function load(quantity) {
       isListEmpty = false;
       data.itemslist.forEach(addItem);
     } else {
+      areMoreItems = false
       if (isListEmpty) {
         addEmptyListInfo();
       }
-    }
-  
-    // count child elements of .main-items and print it
-    const itemsNrAfter = getTodoItemQuantity()
-    console.log({itemsNrAfter})
-
-    if (itemsNr === itemsNrAfter) {
-      areMoreItems = false
     }
   });
 }
@@ -236,12 +214,12 @@ function deleteItemListener() {
       setTimeout(() => {
         itemElement.innerHTML = '';
         document.querySelector(".confirm-delete-button").disabled = false;
-      }, 1500);
+      }, HIDE_ANIMATION_DURATION_OPACITY);
 
       setTimeout(() => {
         itemElement.remove();
         enableXClick()
-      }, 2000);
+      }, HIDE_ANIMATION_DURATION_ALL);
     }
   });
 }
