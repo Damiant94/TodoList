@@ -6,8 +6,9 @@ from .forms import UserCreateForm
 from .models import Item
 import time
 
-# import logging
-# logger = logging.getLogger(__name__)
+import logging
+logger = logging.getLogger(__name__)
+
 
 # Create your views here.
 def login_view(request):
@@ -63,7 +64,7 @@ def itemslist(request):
   start = int(request.GET.get("start") or 0)
   end = int(request.GET.get("end") or (start + 2))
 
-  items = list(Item.objects.select_related().filter(user=request.user.id).values())
+  items = list(Item.objects.filter(user=request.user.id).values())
   items.reverse()
 
   data = items[start:end+1]

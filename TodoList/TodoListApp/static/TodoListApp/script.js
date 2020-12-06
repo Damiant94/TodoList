@@ -3,23 +3,143 @@
 let counter = 0;
 
 // Load posts 3 items at a time
-var quantity = 3;
+const QUANTITY_TO_ADD_ON_SCROLL = 3;
 
-// When DOM loads, render the first 3 items
-document.addEventListener('DOMContentLoaded', load(quantity));
-var empty = true;
+var isListEmpty;
 var removed = [];
-delete_item_listener();
+var areMoreItems = true;
+var enabledActions = true;
+
+const HIDE_ANIMATION_DURATION_OPACITY = 1500
+const HIDE_ANIMATION_DURATION_ALL = 2000;
 
 
-// If scrolled to bottom, load the next 3 items
-window.onscroll = () => {
-  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-    load(quantity);
-  }
-};
+document.addEventListener('DOMContentLoaded', () => {
 
-// Load next set of items
+  setTimeout(() => { 
+    window.scroll(0, 0)
+
+    // SETTING LISTENERS:
+    deleteItemListener()
+
+    window.onresize = () => {
+      console.log("resize!")
+      const resizeWindow = window.onresize
+      window.onresize = "none"
+      if (areMoreItems && enabledActions && checkIfIsFreeHeight()) {
+        const quantity = getQuantityOfItemsToAdd()
+        load(quantity);
+      }
+      setTimeout(() => {
+        window.onresize = resizeWindow
+      }, 3000);
+    }
+    
+    window.onscroll = () => {
+      if (areMoreItems && enabledActions && isScrolledToBottom()) {
+        load(QUANTITY_TO_ADD_ON_SCROLL);
+      }
+    };
+
+    confirmDeleteButtonListener()
+
+    // END OF SETTING LISTENERS
+
+
+    load(QUANTITY_TO_ADD_ON_SCROLL)
+    setTimeout(() => {
+      if (checkIfIsFreeHeight()){
+        load(getQuantityOfItemsToAdd())
+      }
+    }, 2000);
+  }, 100);
+})
+
+function confirmDeleteButtonListener() {
+  const confirm_button = document.querySelector(".confirm-delete-button")
+  confirm_button.addEventListener("click", () => {
+    if (removed.length <= 0) console.error("Length of array 'removed' must be greater than 0")
+    confirm_button.value = removed.join();
+  })
+}
+
+function isScrolledToBottom() {
+  return window.innerHeight + window.scrollY >= document.body.offsetHeight
+}
+
+// dummy function
+document.addEventListener("click", (event) => {
+  console.log("click")
+  // console.log(window.scrollY)
+  // console.log(window.innerHeight)
+  // console.log(document.body.offsetHeight)
+  // console.log(window.onresize)
+  console.log(window.scrollY)
+  window.scroll(0, 0)
+
+})
+
+function parseInt10(string) {
+  return parseInt(string, 10);
+}
+
+function getComputedStyles(className) {
+  const element = document.querySelector(`.${className}`);
+  return window.getComputedStyle(element);
+}
+
+function getOuterHeight(className) {
+  const elementStyles = getComputedStyles(className);
+  const elementHeight = parseInt10(elementStyles.height);
+  const elementMarginTop = parseInt10(elementStyles.marginTop);
+  const elementMarginBottom = parseInt10(elementStyles.marginBottom);
+  return elementHeight + elementMarginTop + elementMarginBottom;
+}
+
+function getHeightOfOtherElements() {
+  const containerStyles = getComputedStyles("container");
+  const containerPadding = parseInt10(containerStyles.padding);
+  const containerMargin = parseInt10(containerStyles.margin);
+  const headerOuterHeight = getOuterHeight("header");
+  return 2 * containerPadding + 2 * containerMargin + headerOuterHeight;
+}
+
+function getBodyMinOuterHeight() {
+  const containerStyles = getComputedStyles("container");
+  const containerMinHeight = parseInt(containerStyles.minHeight, 10);
+  return containerMinHeight + 2 * parseInt(containerStyles.margin, 10);
+}
+
+// function hasBodyMinHeight() {
+//   return document.body.offsetHeight === getBodyMinOuterHeight();
+// }
+
+function getHeightOfAllElements(className) {
+  const elements = document.querySelectorAll(`.${className}`);
+  const heightOfElement = getOuterHeight(className);
+  return elements.length * heightOfElement;
+}
+
+function checkIfIsFreeHeight() {
+  return window.innerHeight - getHeightOfOtherElements() - getHeightOfAllElements("todo-item") > 0
+}
+
+function checkIfIsFreeHeightAfterRemove() {
+  return window.innerHeight - getHeightOfOtherElements() - getHeightOfAllElements("todo-item") + getOuterHeight("todo-item") > 0
+}
+
+function getFreeHeight() {
+  return window.innerHeight - getHeightOfOtherElements() - getHeightOfAllElements("todo-item")
+}
+
+function getQuantityOfItemsToAdd() {
+  return Math.ceil(getFreeHeight() / getOuterHeight("todo-item"))
+}
+
+function getTodoItemQuantity() {
+  return document.querySelector(".main-items").childElementCount
+}
+
 function load(quantity) {
 
   // Set start and end item numbers, and update counter
@@ -27,68 +147,91 @@ function load(quantity) {
   const end = start + quantity - 1;
   counter = end + 1;
 
-  // Get new items and add items
+  // count child elements of .main-items and print it
+  const itemsNr = getTodoItemQuantity()
+  console.log({itemsNr})
+
   fetch(`itemslist?start=${start}&end=${end}`)
   .then(response => response.json())
   .then(data => {
     if (data.itemslist.length > 0) {
-      empty = false;
-      data.itemslist.forEach(add_item);
+      isListEmpty = false;
+      data.itemslist.forEach(addItem);
     } else {
-      if (empty) {
-        add_message_empty();
+      if (isListEmpty) {
+        addEmptyListInfo();
       }
     }
-  })
-};
+  
+    // count child elements of .main-items and print it
+    const itemsNrAfter = getTodoItemQuantity()
+    console.log({itemsNrAfter})
 
-// Add a new item with given contents to DOM
-function add_message_empty() {
-  const item = document.createElement('section');
-  item.className = "empty-list";
-  document.querySelector('.main-items').innerHTML = "Your list is empty";
+    if (itemsNr === itemsNrAfter) {
+      areMoreItems = false
+    }
+  });
 }
 
-function add_item(content) {
-
-  // Create new item
+function addEmptyListInfo() {
   const item = document.createElement('section');
-  item.className = "todo-item";
-  item.innerHTML =     
-    `<p hidden class="id">${content.id}</p>
-    <div name="delete-button" value="${content.id}" class="x-wrapper">
+  item.className = "empty-list";
+  document.querySelector('.main-items').innerText = "Your list is empty";
+}
+
+function addItem(item) {
+  const itemNode = document.createElement('section');
+  itemNode.className = "todo-item";
+  itemNode.innerHTML =     
+    `<p hidden class="id">${item.id}</p>
+    <div name="delete-button" value="${item.id}" class="x-wrapper">
       <i class="far fa-times-circle"></i>
     </div>
-    <h2 name="name" class="todo-item-name">${content.name}</h2>
+    <h2 name="name" class="todo-item-name">${item.name}</h2>
     <label for="details">Details:</label>
-    <p class="details" name="details">${content.details}</p>
-    <p class="date">${content.date}</p>`;
-
-  // Add item to DOM
-  document.querySelector('.main-items').append(item);
+    <p class="details" name="details">${item.details}</p>
+    <p class="date">${item.date}</p>`;
+  document.querySelector('.main-items').append(itemNode);
 };
 
-function delete_item_listener() {
-  document.querySelector(".main").addEventListener("click", function(e) {
-    if(e.target && e.target.nodeName === "I") {
-      const itemElement = e.target.parentElement.parentElement;
+function disableXClick() {
+  for (item of document.querySelectorAll(".x-wrapper")) {
+    item.style.pointerEvents = 'none';
+  }
+  enabledActions = false;
+}
 
-      const item_id = itemElement.querySelector('.id').innerHTML;
-      removed.push(item_id);
+function enableXClick() {
+  for (item of document.querySelectorAll(".x-wrapper")) {
+    item.style.pointerEvents = 'auto';
+  }
+  enabledActions = true;
+}
+
+function getItemElement(clickEvent) {
+  return clickEvent.target.parentElement.parentElement;
+}
+
+function appendIdToDelete(itemElement) {
+  const item_id = itemElement.querySelector('.id').innerHTML;
+  removed.push(item_id);
+}
+
+function deleteItemListener() {
+  document.querySelector(".main").addEventListener("click", function(event) {
+    if(event.target.nodeName === "I") {
+
+      const itemElement = getItemElement(event)
+      appendIdToDelete(itemElement);
 
       itemElement.style.animationPlayState = 'running';
-      itemElement.addEventList;
+      // itemElement.addEventList;
 
-      for (item of document.querySelectorAll(".x-wrapper")) {
-        item.style.pointerEvents = 'none';
+      disableXClick()
+
+      if (areMoreItems && checkIfIsFreeHeightAfterRemove()) {
+        load(1);
       }
-
-      setTimeout(() => {
-        let todoitemsLen = document.querySelector(".main-items").querySelectorAll(".todo-item").length
-        if (todoitemsLen === 3) {
-          load(1);
-        };
-      }, 0);
 
       setTimeout(() => {
         itemElement.innerHTML = '';
@@ -97,19 +240,8 @@ function delete_item_listener() {
 
       setTimeout(() => {
         itemElement.remove();
+        enableXClick()
       }, 2000);
-
-      setTimeout(() => {
-        for (item of document.querySelectorAll(".x-wrapper")) {
-          item.style.pointerEvents = 'auto';
-        }
-      }, 2000);
-    }
-    
-
-    let confirm_button = document.querySelector(".confirm-delete-button")
-    if (removed.length > 0){
-      confirm_button.value = removed.join();
     }
   });
 }
