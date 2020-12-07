@@ -1,6 +1,10 @@
 {% extends "TodoListApp/base.html" %}
 {% load static %}
 
+{% block style %}
+  <link rel="stylesheet" href="{% static 'TodoListApp/items.css' %}">
+{% endblock %}
+
 {% block body %}
 
   <div class="container container-items">

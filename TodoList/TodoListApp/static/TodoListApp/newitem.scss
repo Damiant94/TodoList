@@ -1,0 +1,93 @@
+
+.main-new-item {
+
+  .new-todo-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: #fff;
+    width: 400px;
+    border: 3px solid #fff;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    height: auto;
+    padding: 40px;
+
+    .todo-item-name-input {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-bottom: 10px;
+      /* border: 1px solid green; */
+      height: 40px;
+      padding: 5px;
+      outline: none;
+      color: grey;
+      overflow-y: auto;
+      text-align: left;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    label {
+      font-size: 18px;
+      margin-bottom: 3px;
+    }
+
+    .submit {
+      width: 200px;
+      height: 40px;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .todo-item-details-input {
+      overflow-wrap: break-word;
+      overflow-y: auto;
+      height: 110px;
+      padding: 10px;
+      text-align: justify;
+      resize: none;
+      margin-bottom: 10px;
+      font-size: 16px;
+      outline: none;
+      border: 3px solid #fff;
+      border-radius: 0;
+    }
+  }
+
+  .date-input {
+    margin-bottom: 10px;
+    height: 30px;
+    padding: 10px;
+    outline: none;
+  }
+
+  .submit-new-item {
+    width: 40%;
+    outline: none;
+  }
+
+  .new-todo-item {
+
+    form {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+  } 
+}

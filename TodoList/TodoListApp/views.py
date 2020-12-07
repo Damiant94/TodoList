@@ -21,7 +21,7 @@ def login_view(request):
       return HttpResponseRedirect(reverse("items"))
     else:
       return render(request, "TodoListApp/login.html", {
-        "message": "Invalid credentials."
+        "message": "Invalid login or password."
       })
   return render(request, "TodoListApp/login.html")
 
@@ -35,7 +35,7 @@ def logout_view(request):
       "message": "Logged out."
   })
 
-def items(request):
+def items_view(request):
   if not request.user.is_authenticated:
     return HttpResponseRedirect(reverse("login"))
 
@@ -53,11 +53,11 @@ def items(request):
       return HttpResponseRedirect(reverse("items"))
       
   return render(request, "TodoListApp/items.html", {
-    "items": Item.objects.select_related().filter(user=request.user.id)
+    "items": Item.objects.filter(user=request.user.id)
   })
 
 
-def itemslist(request):
+def itemslist_api(request):
   if not request.user.is_authenticated:
     return HttpResponseRedirect(reverse("login"))
 
@@ -66,20 +66,18 @@ def itemslist(request):
 
   items = list(Item.objects.filter(user=request.user.id).values())
   items.reverse()
-
   data = items[start:end+1]
 
   time.sleep(1)
-
   return JsonResponse({
     "itemslist": data
   })
 
 
-def newitem(request):
+def new_item_view(request):
   if not request.user.is_authenticated:
     return HttpResponseRedirect(reverse("login"))
-  
+
   if request.method == "POST":
     name = request.POST["name"]
     details = request.POST["details"]
@@ -92,7 +90,7 @@ def newitem(request):
   return render(request, "TodoListApp/newitem.html")
 
 
-def signup(request):
+def signup_view(request):
   if request.method == 'POST':
     form = UserCreateForm(request.POST)
     if form.is_valid():
