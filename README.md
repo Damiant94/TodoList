@@ -1,6 +1,6 @@
 # My TodoList App
 
-[a link](
+[Link to demo website](
 http://awesome-todo-list.herokuapp.com/
 )
 
