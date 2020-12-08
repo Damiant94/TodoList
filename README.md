@@ -10,13 +10,15 @@
 Web application, which provides Todo List.
 	
 ## Technologies
-Project will be created with:
-* HTML / Sass / JavaScript / React
+Project created with:
+* HTML / Sass / JavaScript
 * Python / Django
 * SQLite
 
 ## Features
-My Todo List app will contain features such as:
-* Elegant responsive layout
+My Todo List app contains features such as:
+* User Autenthication (Sign up, Login, Logout)
+* User's tasks stored in database 
 * Easily addable and removable items
-* User Login/Logout
+* User-friendly
+* Time and date in footer
