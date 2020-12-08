@@ -30,136 +30,146 @@
 html {
   overflow-y: scroll;
   position: relative;
-}
 
-body {
-  width: 100%;
-  height: 100%;
-  min-height: 1000px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #fff;
-  font-family: 'Caveat', cursive;
-  background: url(img/geometry.png);
-  background-size: 400px 400px;
-}
-
-.nav {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  top: 0;
-  z-index: 10;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-
-  .ul {
+  body {
+    width: 100%;
+    height: 100%;
+    min-height: 1000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    z-index: 20;
-
-    .li {
-      padding: 10px;
-      font-size: 30px;
-      transition: all 0.5s;
-      border-bottom: 1px solid transparent;
-      z-index: 20;
-      margin-bottom: 5px;
-      margin-top: 5px;
-      margin-left: 5px;
-      margin-right: 5px;
-      border-radius: 10px;
-
-      a {
-        outline: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #fff;
+    font-family: 'Caveat', cursive;
+    background: linear-gradient(rgba(94, 243, 223, 0.1), rgba(94, 243, 223, 0.1)), url(img/geometry.png);
+    background-size: 400px 400px;
+    z-index: -1;
+    // -webkit-filter: invert(1);
+    // filter: invert(1);
+  
+    .nav {
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      top: 0;
+      z-index: 10;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+    
+      .ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        z-index: 20;
+    
+        .li {
+          padding: 10px;
+          font-size: 30px;
+          transition: all 0.5s;
+          border-bottom: 1px solid transparent;
+          z-index: 20;
+          margin-bottom: 5px;
+          margin-top: 5px;
+          margin-left: 5px;
+          margin-right: 5px;
+          border-radius: 10px;
+    
+          a {
+            outline: none;
+          }
+        }
+    
+        .li:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+    
+        .li:active {
+          background-color: rgba(0, 0, 0, 0);
+        }
+    
+        .li:disabled {
+          background-color: rgba(0, 0, 0, 0);
+          cursor: auto;
+          color: grey;
+        }
       }
     }
-
-    .li:hover {
-      background-color: rgba(0, 0, 0, 0.8);
+    
+    a {
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.5s;
+      outline: none;
     }
-
-    .li:active {
-      background-color: rgba(0, 0, 0, 0);
+    
+    .container {
+      -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+      box-shadow: 5px 5px 15px 5px #000000;
+      border-radius: 15px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 600px;
+      min-height: 800px;
+      padding: 50px;
+      margin: 100px;
+      background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(img/cork1.jpg);
+      // background-color: rgba(0, 0, 0, 0.8);
+      // background: url(img/cork1.jpg);
+      // filter: grayscale(50%);
+      background-size: 400px 400px;
+      image-rendering: -webkit-optimize-contrast;
     }
-
-    .li:disabled {
-      background-color: rgba(0, 0, 0, 0);
-      cursor: auto;
-      color: grey;
+    
+    .header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 100%;
+      height: 60px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #fff;
+    
+      h1 {
+        font-size: 42px;
+        font-weight: bold;
+      }
+    }
+    
+    .main {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
     }
   }
 }
 
-a {
-  color: #fff;
-  text-decoration: none;
-  transition: all 0.5s;
-  outline: none;
-}
 
-.container {
-  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
-  box-shadow: 5px 5px 15px 5px #000000;
-  border-radius: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 600px;
-  min-height: 800px;
-  padding: 50px;
-  margin: 100px;
-  background-image: url("img/cork1.jpg");
-  background-size: 200px 200px;
 
-}
 
-.header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 60px;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #fff;
-
-  h1 {
-    font-size: 42px;
-    font-weight: bold;
-  }
-}
-
-.main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
 
 
 /*# sourceMappingURL=style.css.map */

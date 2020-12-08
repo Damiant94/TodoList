@@ -24,13 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
     window.onresize = () => {
       const resizeWindow = window.onresize
       window.onresize = "none"
+      console.log(checkIfIsFreeHeight())
       if (areMoreItems && enabledActions && checkIfIsFreeHeight()) {
         const quantity = getQuantityOfItemsToAdd()
         load(quantity);
       }
       setTimeout(() => {
         window.onresize = resizeWindow
-      }, 3000);
+      }, 2000);
     }
     
     window.onscroll = () => {
@@ -41,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         load(getQuantityOfItemsToAdd())
         setTimeout(() => {
           window.onscroll = scroll
-        }, 3000);
+        }, 2000);
       } 
     };
 
@@ -63,6 +64,35 @@ function confirmDeleteButtonListener() {
     if (removed.length <= 0) console.error("Length of array 'removed' must be greater than 0")
     confirm_button.value = removed.join();
   })
+}
+
+function deleteItemListener() {
+  document.querySelector(".main").addEventListener("click", function(event) {
+    if(event.target.nodeName === "I") {
+
+      const itemElement = getItemElement(event)
+      appendIdToDelete(itemElement);
+
+      itemElement.style.animationPlayState = 'running';
+      // itemElement.addEventList;
+
+      // disableXClick()
+
+      if (areMoreItems && checkIfIsFreeHeightAfterRemove()) {
+        load(1);
+      }
+
+      setTimeout(() => {
+        itemElement.innerHTML = '';
+        document.querySelector(".confirm-delete-button").disabled = false;
+      }, HIDE_ANIMATION_DURATION_OPACITY);
+
+      setTimeout(() => {
+        itemElement.remove();
+        // enableXClick()
+      }, HIDE_ANIMATION_DURATION_ALL);
+    }
+  });
 }
 
 function isScrolledToBottom() {
@@ -93,16 +123,6 @@ function getHeightOfOtherElements() {
   const headerOuterHeight = getOuterHeight("header");
   return 2 * containerPadding + 2 * containerMargin + headerOuterHeight;
 }
-
-// function getBodyMinOuterHeight() {
-//   const containerStyles = getComputedStyles("container");
-//   const containerMinHeight = parseInt(containerStyles.minHeight, 10);
-//   return containerMinHeight + 2 * parseInt(containerStyles.margin, 10);
-// }
-
-// function hasBodyMinHeight() {
-//   return document.body.offsetHeight === getBodyMinOuterHeight();
-// }
 
 function getHeightOfAllElements(className) {
   const elements = document.querySelectorAll(`.${className}`);
@@ -173,19 +193,19 @@ function addItem(item) {
   document.querySelector('.main-items').append(itemNode);
 };
 
-function disableXClick() {
-  for (item of document.querySelectorAll(".x-wrapper")) {
-    item.style.pointerEvents = 'none';
-  }
-  enabledActions = false;
-}
+// function disableXClick() {
+//   for (item of document.querySelectorAll(".x-wrapper")) {
+//     item.style.pointerEvents = 'none';
+//   }
+//   enabledActions = false;
+// }
 
-function enableXClick() {
-  for (item of document.querySelectorAll(".x-wrapper")) {
-    item.style.pointerEvents = 'auto';
-  }
-  enabledActions = true;
-}
+// function enableXClick() {
+//   for (item of document.querySelectorAll(".x-wrapper")) {
+//     item.style.pointerEvents = 'auto';
+//   }
+//   enabledActions = true;
+// }
 
 function getItemElement(clickEvent) {
   return clickEvent.target.parentElement.parentElement;
@@ -196,31 +216,4 @@ function appendIdToDelete(itemElement) {
   removed.push(item_id);
 }
 
-function deleteItemListener() {
-  document.querySelector(".main").addEventListener("click", function(event) {
-    if(event.target.nodeName === "I") {
 
-      const itemElement = getItemElement(event)
-      appendIdToDelete(itemElement);
-
-      itemElement.style.animationPlayState = 'running';
-      // itemElement.addEventList;
-
-      disableXClick()
-
-      if (areMoreItems && checkIfIsFreeHeightAfterRemove()) {
-        load(1);
-      }
-
-      setTimeout(() => {
-        itemElement.innerHTML = '';
-        document.querySelector(".confirm-delete-button").disabled = false;
-      }, HIDE_ANIMATION_DURATION_OPACITY);
-
-      setTimeout(() => {
-        itemElement.remove();
-        enableXClick()
-      }, HIDE_ANIMATION_DURATION_ALL);
-    }
-  });
-}

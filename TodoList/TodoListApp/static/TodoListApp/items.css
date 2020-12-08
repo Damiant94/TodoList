@@ -55,6 +55,10 @@
   outline: none;
   color: #000;
   overflow-y: auto;
+  scrollbar-width: thin;
+  scroll-padding: 0;
+  scroll-margin: 0;
+  white-space: nowrap;
 }
 .main-items .todo-item .details {
   border-radius: 5px;
@@ -69,6 +73,9 @@
   margin-bottom: 10px;
   outline: none;
   font-size: 22px;
+  scrollbar-width: thin;
+  scroll-padding: 0;
+  scroll-margin: 0;
 }
 .main-items .todo-item .x-wrapper {
   position: absolute;
