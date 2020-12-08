@@ -115,11 +115,11 @@ function checkIfIsFreeHeight() {
 }
 
 function checkIfIsFreeHeightAfterRemove() {
-  return window.innerHeight - getHeightOfOtherElements() - getHeightOfAllElements("todo-item") + getOuterHeight("todo-item") > 0
+  return window.innerHeight - getHeightOfAllElements("todo-item") + getOuterHeight("todo-item") > 0
 }
 
 function getFreeHeight() {
-  return window.innerHeight - getHeightOfOtherElements() - getHeightOfAllElements("todo-item")
+  return window.innerHeight - getHeightOfAllElements("todo-item")
 }
 
 function getQuantityOfItemsToAdd() {
