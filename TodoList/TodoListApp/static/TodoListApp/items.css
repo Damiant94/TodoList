@@ -47,7 +47,6 @@
   margin-bottom: 10px;
   margin-left: 40px;
   margin-right: 25px;
-  /* border: 1px solid green; */
   height: 40px;
   font-size: 25px;
   font-weight: bold;
@@ -75,7 +74,6 @@
   position: absolute;
   right: 0;
   top: 0;
-  /* border: 1px solid white; */
   margin: 10px;
   font-size: 20px;
   -webkit-transition: all 0.2s;

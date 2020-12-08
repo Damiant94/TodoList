@@ -134,15 +134,12 @@ a {
   width: 100%;
   height: 60px;
   text-align: center;
-  /* border: 1px solid white; */
   margin-bottom: 20px;
   color: #fff;
 }
 .header h1 {
-  /* color: #fff; */
   font-size: 42px;
   font-weight: bold;
-  /* border: 1px solid white; */
 }
 
 .main {
