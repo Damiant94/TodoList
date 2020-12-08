@@ -18,6 +18,7 @@
     padding-top: 60px;
     background-image: url("img/sticky7.png");
     background-size: 400px 430px;
+    opacity: 0.9;
 
     form {
       display: -webkit-box;
@@ -27,7 +28,7 @@
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      
+
       .todo-item-name-input {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -97,7 +98,16 @@
         border-radius: 10px;
         font-family: 'Caveat', cursive;
         font-size: 20px;
+        cursor: pointer;
       }
+
+      input:hover,
+      input:focus,
+      textarea:hover,
+      textarea:focus{
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
   
       .submit {
         width: 100px;
@@ -114,7 +124,11 @@
       }
 
       .submit:hover {
-        transform: translateY(-7px);
+        transform: translateY(-5px);
+      }
+
+      .submit:active {
+        transform: translateY(0);
       }
     }
   }

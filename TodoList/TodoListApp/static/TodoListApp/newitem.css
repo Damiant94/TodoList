@@ -15,6 +15,7 @@
   padding-top: 60px;
   background-image: url("img/sticky7.png");
   background-size: 400px 430px;
+  opacity: 0.9;
 }
 .main-new-item .new-todo-item form {
   display: -webkit-box;
@@ -91,6 +92,13 @@
   border-radius: 10px;
   font-family: "Caveat", cursive;
   font-size: 20px;
+  cursor: pointer;
+}
+.main-new-item .new-todo-item form input:hover,
+.main-new-item .new-todo-item form input:focus,
+.main-new-item .new-todo-item form textarea:hover,
+.main-new-item .new-todo-item form textarea:focus {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .main-new-item .new-todo-item form .submit {
   width: 100px;
@@ -106,7 +114,10 @@
   outline: none;
 }
 .main-new-item .new-todo-item form .submit:hover {
-  transform: translateY(-7px);
+  transform: translateY(-5px);
+}
+.main-new-item .new-todo-item form .submit:active {
+  transform: translateY(0);
 }
 
 /*# sourceMappingURL=newitem.css.map */

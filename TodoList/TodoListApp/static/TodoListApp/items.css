@@ -7,6 +7,9 @@
   outline: none;
 }
 
+.main-items {
+  opacity: 0.9;
+}
 .main-items .todo-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -96,6 +99,11 @@
 .main-items .empty-list {
   font-size: 44px;
   margin-bottom: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  padding-right: 15px;
+  border-radius: 10px;
+  text-align: center;
 }
 .main-items .todo-item label {
   font-size: 20px;

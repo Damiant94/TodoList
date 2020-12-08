@@ -3,6 +3,16 @@
 
 {% block style %}
   <link rel="stylesheet" href="{% static 'TodoListApp/items.css' %}">
+  <link rel="stylesheet" href="{% static 'TodoListApp/loader.css' %}">
+  <title>Items</title>
+{% endblock %}
+
+{% block loader %}
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="section-left"></div>
+    <div class="section-right"></div>
+  </div>
 {% endblock %}
 
 {% block body %}
@@ -24,6 +34,7 @@
 
   <div class="container container-items">
     <header class="header">
+      <h1>Hello :{{ name }}:</h1>
       <h1>Here is a list of your activities:</h1>
     </header>
     <main class="main main-items">

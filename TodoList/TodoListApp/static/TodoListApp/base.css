@@ -48,7 +48,7 @@ html body {
   align-items: center;
   color: #fff;
   font-family: "Caveat", cursive;
-  background: linear-gradient(rgba(94, 243, 223, 0.1), rgba(94, 243, 223, 0.1)), url(img/geometry.png);
+  background: linear-gradient(rgba(248, 111, 111, 0.1), rgba(248, 111, 111, 0.1)), url(img/geometry.png);
   background-size: 400px 400px;
   z-index: -1;
 }
@@ -122,21 +122,28 @@ html body .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 100%;
-  height: 60px;
+  align-self: center;
+  min-height: 60px;
   text-align: center;
   margin-bottom: 20px;
   color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 10px;
 }
 html body .header h1 {
+  overflow-wrap: break-word;
   font-size: 42px;
   font-weight: bold;
+  max-width: 500px;
 }
 html body .main {
   display: -webkit-box;
@@ -149,6 +156,27 @@ html body .main {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+html body .footer {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  bottom: 0;
+  font-size: 28px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+html body .footer .hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+html body .footer .author {
+  text-align: center;
+}
+html body .footer .time {
+  padding-right: 20px;
+  text-align: right;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -13,6 +13,7 @@
 }
 
 .main-items {
+  opacity: 0.9;
 
   .todo-item {
     display: -webkit-box;
@@ -108,6 +109,11 @@
   .empty-list {
     font-size: 44px;
     margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    padding-right: 15px;
+    border-radius: 10px;
+    text-align: center;
   }
 
   .todo-item label {

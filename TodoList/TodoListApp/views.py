@@ -53,7 +53,8 @@ def items_view(request):
       return HttpResponseRedirect(reverse("items"))
       
   return render(request, "TodoListApp/items.html", {
-    "items": Item.objects.filter(user=request.user.id)
+    "items": Item.objects.filter(user=request.user.id),
+    "name": request.user.username
   })
 
 

@@ -3,6 +3,16 @@
 
 {% block style %}
   <link rel="stylesheet" href="{% static 'TodoListApp/login.css' %}">
+  <link rel="stylesheet" href="{% static 'TodoListApp/loader.css' %}">
+  <title>Login</title>
+{% endblock %}
+
+{% block loader %}
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="section-left"></div>
+    <div class="section-right"></div>
+  </div>
 {% endblock %}
 
 {% block body %}
@@ -26,7 +36,6 @@
           Doesn't have an account yet? <br> Click here to register
         </p>
       </a>
-      <br><br>
       {% if message %}
         <div class="message">{{ message }}</div>
       {% endif %}

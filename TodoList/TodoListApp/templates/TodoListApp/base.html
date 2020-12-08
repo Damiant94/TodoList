@@ -14,11 +14,26 @@
   <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <title>Todo List</title>
 </head>
 <body>
+  {% block loader %}
+
+  {% endblock %}
   {% block body %}
 
   {% endblock %}
+  <footer class="footer">
+    <p class="hidden">
+      8/12/2020 | 18:42:43
+    </p>
+    <p class="author">
+      Created by Damian Tułacz.
+    </p>
+    <p class="time">
+      <span class="timer"></span>
+    </p>
+  </footer>
+  <script src="{% static 'TodoListApp/timer.js' %}"></script>
+  <script src="{% static 'TodoListApp/loader.js' %}"></script>
 </body>
 </html>

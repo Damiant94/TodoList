@@ -33,10 +33,17 @@
   padding: 10px;
   outline: none;
   border: none;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   font-family: "Caveat", cursive;
   color: #fff;
+  transition: all 0.5s;
+}
+.main-register .register-form input:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.main-register .register-form input:hover {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .main-register .register-form .submit {
   padding: 0;
@@ -44,23 +51,25 @@
   margin-top: 20px;
   font-size: 24px;
   border: none;
-  background-color: #fff;
   border-radius: 20px;
   transition: all 0.5s;
   cursor: pointer;
   align-self: center;
   font-family: "Caveat", cursive;
+  background-color: rgba(255, 255, 255, 0.8);
   color: #000;
 }
 .main-register .register-form .submit:hover {
   transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .main-register .register-form .submit:active {
   transform: translateY(0);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .back-to-login {
-  background-color: rgba(155, 72, 72, 0.6);
+  background-color: rgba(155, 72, 72, 0.8);
   border-radius: 20px;
   font-size: 20px;
   padding: 15px;
@@ -68,7 +77,11 @@
 }
 
 .back-to-login:hover {
-  background-color: rgba(155, 72, 72, 0.8);
+  transform: translateY(-5px);
+}
+
+.back-to-login:active {
+  transform: translateY(0);
 }
 
 /*# sourceMappingURL=register.css.map */
