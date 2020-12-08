@@ -5,7 +5,7 @@ let counter = 0;
 // Load 3 items at a time
 const QUANTITY_TO_ADD_ON_SCROLL = 3;
 
-var isListEmpty;
+var isListEmpty = true;
 var removed = [];
 var areMoreItems = true;
 var enabledActions = true;
@@ -143,7 +143,7 @@ function load(quantity) {
       isListEmpty = false;
       data.itemslist.forEach(addItem);
     } else {
-      areMoreItems = false
+      areMoreItems = false;
       if (isListEmpty) {
         addEmptyListInfo();
       }
@@ -154,7 +154,8 @@ function load(quantity) {
 function addEmptyListInfo() {
   const item = document.createElement('section');
   item.className = "empty-list";
-  document.querySelector('.main-items').innerText = "Your list is empty";
+  item.innerText = "Your list is empty";
+  document.querySelector('.main-items').append(item)
 }
 
 function addItem(item) {
@@ -168,7 +169,7 @@ function addItem(item) {
     <h2 name="name" class="todo-item-name">${item.name}</h2>
     <label for="details">Details:</label>
     <p class="details" name="details">${item.details}</p>
-    <p class="date">${item.date}</p>`;
+    <p class="date">Deadline: ${item.date}</p>`;
   document.querySelector('.main-items').append(itemNode);
 };
 

@@ -6,19 +6,25 @@
 {% endblock %}
 
 {% block body %}
+  <nav class="nav">
+    <div class="ul">
+      <a href="{% url 'newitem' %}">
+        <div class="li">Add new item</div>
+      </a>
+      <form action="{% url 'items' %}" method="post">
+        {% csrf_token %}
+        <button class="add-10-items li" value="add-10-items" name="add-10-items">add 10 items</button>
+        <button disabled class="confirm-delete-button li" value="" name="confirm-delete-button">confirm deleting</button>
+      </form>
+      <a href="{% url 'logout' %}">
+        <div class="li">Logout</div>
+      </a>
+    </div>
+  </nav>
 
   <div class="container container-items">
     <header class="header">
       <h1>Here is a list of your activities:</h1>
-      <a href="{% url 'newitem' %}">Add new item</a>
-      <br>
-      <a href="{% url 'logout' %}">Log Out</a>
-      <form action="{% url 'items' %}" method="post">
-        {% csrf_token %}
-        <button disabled class="confirm-delete-button" value="" name="confirm-delete-button">confirm</button>
-        <button class="add-10-items" value="add-10-items" name="add-10-items">add 10 items</button>
-      </form>
-      
     </header>
     <main class="main main-items">
 

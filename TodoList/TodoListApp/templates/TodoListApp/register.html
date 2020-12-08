@@ -9,7 +9,7 @@
 
   <div class="container container-register">
     <header class="header">
-      <h1>Register view</h1>
+      <h1>Welcome. <br> Please sign up.</h1>
     </header>
     <main class="main main-register">
       <form method="post" class="register-form">
@@ -18,8 +18,11 @@
         <input class="submit" type="submit" value="Register">
       </form>
 
-      <br><br>
-      <a href="{% url 'login' %}">Back to login view</a>
+      <a href="{% url 'login' %}">
+        <div class="back-to-login">
+          Back to login
+        </div>
+      </a>
     </main>
   </div>
 

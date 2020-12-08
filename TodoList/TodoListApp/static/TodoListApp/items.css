@@ -1,3 +1,12 @@
+.nav .ul .li {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: "Caveat", cursive;
+  color: #fff;
+  outline: none;
+}
+
 .main-items .todo-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6,11 +15,11 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  color: #fff;
-  height: 230px;
+  color: #000;
+  height: 300px;
   width: 400px;
-  border: 3px solid #fff;
-  margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 20px;
   border-radius: 20px;
   position: relative;
@@ -22,6 +31,8 @@
   animation-fill-mode: forwards;
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
+  background-image: url("img/sticky4.png");
+  background-size: 400px 300px;
 }
 .main-items .todo-item .todo-item-name {
   display: -webkit-box;
@@ -34,26 +45,31 @@
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 10px;
+  margin-left: 40px;
+  margin-right: 25px;
   /* border: 1px solid green; */
   height: 40px;
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 20px;
   padding: 5px;
   outline: none;
-  color: grey;
+  color: #000;
   overflow-y: auto;
 }
 .main-items .todo-item .details {
-  border: 3px solid #e9c1c1;
   border-radius: 5px;
   overflow-wrap: break-word;
   overflow-y: auto;
-  height: 110px;
+  height: 100px;
   padding: 10px;
+  margin-left: 40px;
+  margin-right: 25px;
   text-align: justify;
   resize: none;
   margin-bottom: 10px;
   outline: none;
-  font-size: 18px;
+  font-size: 22px;
 }
 .main-items .todo-item .x-wrapper {
   position: absolute;
@@ -61,27 +77,30 @@
   top: 0;
   /* border: 1px solid white; */
   margin: 10px;
-  font-size: 15px;
+  font-size: 20px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   cursor: pointer;
   border: none;
-  color: #fff;
+  color: #e9c1c1;
   background-color: transparent;
 }
 .main-items .todo-item .x-wrapper:hover {
-  color: #e9c1c1;
+  color: #fff;
 }
 .main-items .empty-list {
   font-size: 44px;
   margin-bottom: 40px;
 }
 .main-items .todo-item label {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 2px;
+  margin-left: 40px;
+  margin-right: 25px;
 }
 .main-items .date {
   text-align: right;
+  margin-right: 25px;
 }
 
 @-webkit-keyframes hide {
@@ -90,50 +109,38 @@
     height: 230px;
     line-height: 100%;
     padding: 20px;
-    margin: 10px;
-    margin-bottom: 20px;
   }
   75% {
     opacity: 0;
     height: 230px;
     line-height: 100%;
     padding: 20px;
-    margin: 10px;
-    margin-bottom: 20px;
   }
   100% {
     opacity: 0;
     height: 0px;
     line-height: 0px;
     padding: 0px;
-    margin: 0px;
-    margin-bottom: 0px;
   }
 }
 @keyframes hide {
   0% {
     opacity: 1;
-    height: 230px;
+    height: 300px;
     line-height: 100%;
     padding: 20px;
-    margin: 10px;
-    margin-bottom: 20px;
   }
   75% {
     opacity: 0;
-    height: 230px;
+    height: 300px;
     line-height: 100%;
     padding: 20px;
-    margin: 10px;
-    margin-bottom: 20px;
   }
   100% {
     opacity: 0;
     height: 0px;
     line-height: 0px;
     padding: 0px;
-    margin: 0px;
-    margin-bottom: 0px;
   }
 }
 

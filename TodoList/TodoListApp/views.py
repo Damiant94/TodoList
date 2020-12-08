@@ -68,6 +68,8 @@ def itemslist_api(request):
   items.reverse()
   data = items[start:end+1]
 
+  logger.error(request.user.username)
+
   time.sleep(1)
   return JsonResponse({
     "itemslist": data

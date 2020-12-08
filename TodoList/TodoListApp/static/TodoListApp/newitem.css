@@ -6,15 +6,26 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  color: #fff;
+  color: #000;
   width: 400px;
-  border: 3px solid #fff;
   margin-bottom: 20px;
   border-radius: 20px;
   height: auto;
   padding: 40px;
+  padding-top: 60px;
+  background-image: url("img/sticky7.png");
+  background-size: 400px 430px;
 }
-.main-new-item .new-todo-item .todo-item-name-input {
+.main-new-item .new-todo-item form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.main-new-item .new-todo-item form .todo-item-name-input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,54 +39,75 @@
   /* border: 1px solid green; */
   height: 40px;
   padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   outline: none;
-  color: grey;
   overflow-y: auto;
   text-align: left;
-  font-size: 18px;
+  font-size: 24px;
   margin-bottom: 12px;
+  margin-left: 5px;
+  margin-right: 10px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  font-family: "Caveat", cursive;
+  font-weight: bold;
 }
-.main-new-item .new-todo-item label {
-  font-size: 18px;
+.main-new-item .new-todo-item form label {
+  font-size: 22px;
   margin-bottom: 3px;
 }
-.main-new-item .new-todo-item .submit {
-  width: 200px;
-  height: 40px;
-  margin-top: 20px;
-  font-size: 18px;
-}
-.main-new-item .new-todo-item .todo-item-details-input {
+.main-new-item .new-todo-item form .todo-item-details-input {
   overflow-wrap: break-word;
   overflow-y: auto;
-  height: 110px;
+  height: 80px;
   padding: 10px;
   text-align: justify;
   resize: none;
   margin-bottom: 10px;
-  font-size: 16px;
+  margin-left: 5px;
+  margin-right: 10px;
+  font-size: 22px;
   outline: none;
-  border: 3px solid #fff;
   border-radius: 0;
+  border: none;
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  font-family: "Caveat", cursive;
 }
-.main-new-item .date-input {
+.main-new-item .new-todo-item form .date-input {
   margin-bottom: 10px;
   height: 30px;
-  padding: 10px;
+  padding: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  margin-left: 5px;
+  margin-right: 140px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  font-family: "Caveat", cursive;
+  font-size: 20px;
+}
+.main-new-item .new-todo-item form .submit {
+  width: 100px;
+  height: 40px;
+  margin-top: 20px;
+  font-size: 24px;
+  border: none;
+  transition: all 0.5s;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 30px;
+  font-family: "Caveat", cursive;
   outline: none;
 }
-.main-new-item .submit-new-item {
-  width: 40%;
-  outline: none;
-}
-.main-new-item .new-todo-item form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.main-new-item .new-todo-item form .submit:hover {
+  transform: translateY(-7px);
 }
 
 /*# sourceMappingURL=newitem.css.map */

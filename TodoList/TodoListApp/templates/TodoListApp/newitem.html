@@ -7,6 +7,17 @@
 
 {% block body %}
 
+  <nav class="nav">
+    <div class="ul">
+      <a href="{% url 'items' %}">
+        <div class="li">Show list of items</div>
+      </a>
+      <a href="{% url 'logout' %}">
+        <div class="li">Logout</div>
+      </a>
+    </div>
+  </nav>
+
   <div class="container container-new">
     <header class="header">
       <h1>Adding new item</h1>
@@ -24,9 +35,6 @@
           <button class="submit">Add</button>
         </form>
       </section>
-      <a href="{% url 'items' %}">Show list of items</a>
-      <br>
-      <a href="{% url 'logout' %}">Log Out</a>
     </main>
     
   </div>

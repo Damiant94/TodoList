@@ -1,3 +1,7 @@
+.header {
+  margin-top: 40px;
+}
+
 .main-login .login-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,20 +18,54 @@
   margin-bottom: 10px;
 }
 .main-login .login-form label {
-  font-size: 18px;
+  font-size: 22px;
   margin-bottom: 3px;
 }
 .main-login .login-form input {
   width: 100%;
   height: 40px;
-  font-size: 20px;
+  font-size: 28px;
   margin-bottom: 12px;
   padding: 10px;
   outline: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  font-family: "Caveat", cursive;
 }
 .main-login .login-form .submit {
+  padding: 0;
   margin-top: 20px;
-  font-size: 18px;
+  background-color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.main-login .login-form .submit:hover {
+  transform: translateY(-5px);
+}
+.main-login .login-form .submit:active {
+  transform: translateY(0);
+}
+.main-login .register-info {
+  background-color: rgba(155, 72, 72, 0.6);
+  border-radius: 20px;
+  padding: 23px;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  transition: all 0.5s;
+  margin-bottom: 20px;
+}
+.main-login .register-info:hover {
+  background-color: rgba(155, 72, 72, 0.8);
+}
+.main-login .message {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #9b4848;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 32px;
 }
 
 /*# sourceMappingURL=login.css.map */
