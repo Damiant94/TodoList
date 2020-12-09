@@ -120,7 +120,7 @@
 #loader-wrapper .section-right, #loader-wrapper .section-left {
   position: fixed;
   top: 0;
-  width: 50%;
+  width: 51%;
   height: 100%;
   background: #222;
   z-index: 1000;

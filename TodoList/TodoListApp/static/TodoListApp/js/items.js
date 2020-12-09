@@ -8,7 +8,6 @@ const QUANTITY_TO_ADD_ON_SCROLL = 3;
 let isListEmpty = true;
 let removed = [];
 let areMoreItems = true;
-let enabledActions = true;
 
 const HIDE_ANIMATION_DURATION_OPACITY = 1500
 const HIDE_ANIMATION_DURATION_ALL = 2000;
@@ -24,8 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.onresize = () => {
       const resizeWindow = window.onresize;
       window.onresize = "none";
-      // console.log(checkIfIsFreeHeight())
-      if (areMoreItems && enabledActions && checkIfIsFreeHeight()) {
+      if (areMoreItems && checkIfIsFreeHeight()) {
         const quantity = getQuantityOfItemsToAdd();
         load(quantity);
       }
@@ -35,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     window.onscroll = () => {
-      if (areMoreItems && enabledActions && isScrolledToBottom()) load(QUANTITY_TO_ADD_ON_SCROLL);
+      if (areMoreItems && isScrolledToBottom()) load(QUANTITY_TO_ADD_ON_SCROLL);
       else if (checkIfIsFreeHeight()) {
         const scroll = window.onscroll;
         window.onscroll = "none";
@@ -76,7 +74,6 @@ function deleteItemListener() {
       itemElement.style.animationPlayState = 'running';
       // itemElement.addEventList;
 
-      // disableXClick()
 
       if (areMoreItems && checkIfIsFreeHeightAfterRemove()) {
         load(1);
@@ -89,7 +86,6 @@ function deleteItemListener() {
 
       setTimeout(() => {
         itemElement.remove();
-        // enableXClick()
       }, HIDE_ANIMATION_DURATION_ALL);
     }
   });
@@ -119,14 +115,6 @@ function getOuterHeight(className) {
     return elementHeight + elementMarginTop + elementMarginBottom;
   }
 }
-
-// function getHeightOfOtherElements() {
-//   const containerStyles = getComputedStyles("container");
-//   const containerPadding = parseInt10(containerStyles.padding);
-//   const containerMargin = parseInt10(containerStyles.margin);
-//   const headerOuterHeight = getOuterHeight("header");
-//   return 2 * containerPadding + 2 * containerMargin + headerOuterHeight;
-// }
 
 function getHeightOfAllElements(className) {
   const elements = document.querySelectorAll(`.${className}`);
@@ -197,20 +185,6 @@ function addItem(item) {
   document.querySelector('.main-items').append(itemNode);
 };
 
-// function disableXClick() {
-//   for (item of document.querySelectorAll(".x-wrapper")) {
-//     item.style.pointerEvents = 'none';
-//   }
-//   enabledActions = false;
-// }
-
-// function enableXClick() {
-//   for (item of document.querySelectorAll(".x-wrapper")) {
-//     item.style.pointerEvents = 'auto';
-//   }
-//   enabledActions = true;
-// }
-
 function getItemElement(clickEvent) {
   return clickEvent.target.parentElement.parentElement;
 }
@@ -219,5 +193,4 @@ function appendIdToDelete(itemElement) {
   const item_id = itemElement.querySelector('.id').innerHTML;
   removed.push(item_id);
 }
-
 

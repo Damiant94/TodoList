@@ -1,6 +1,12 @@
 
-.header{
+.header {
   margin-top: 40px;
+  padding: 10px;
+
+  .title {
+    color: rgb(245, 126, 126);
+    font-size: 55px;
+  }
 }
 
 .main-login {
@@ -38,6 +44,7 @@
       font-family: 'Caveat', cursive;
       color: #fff;
       transition: all 0.5s;
+      text-align: center;
     }
 
     input:hover {

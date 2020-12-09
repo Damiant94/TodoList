@@ -1,5 +1,10 @@
 .header {
   margin-top: 40px;
+  padding: 10px;
+}
+.header .title {
+  color: #f57e7e;
+  font-size: 55px;
 }
 
 .main-login .login-form {
@@ -34,6 +39,7 @@
   font-family: "Caveat", cursive;
   color: #fff;
   transition: all 0.5s;
+  text-align: center;
 }
 .main-login .login-form input:hover {
   background-color: rgba(0, 0, 0, 0.4);

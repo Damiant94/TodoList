@@ -1,8 +1,8 @@
 
 
-if (document.title === "Login" && "firstVisit" in localStorage) {
+if (document.title === "Awesome Todo List" && "firstVisit" in localStorage) {
   deleteLoader();
-} else if (document.title === "Login") {
+} else if (document.title === "Awesome Todo List") {
   localStorage.firstVisit = false;
   addClassLoadedToBody();
 } else {

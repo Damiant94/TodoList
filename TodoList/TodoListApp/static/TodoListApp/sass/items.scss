@@ -9,6 +9,11 @@
       color: #fff;
       outline: none;
     }
+
+    form {
+      display: flex;
+      flex-direction: row;
+    }
   }
 }
 

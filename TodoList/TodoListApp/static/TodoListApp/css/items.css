@@ -6,6 +6,10 @@
   color: #fff;
   outline: none;
 }
+.nav .ul form {
+  display: flex;
+  flex-direction: row;
+}
 
 .main-items {
   opacity: 0.9;
