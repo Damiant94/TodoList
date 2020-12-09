@@ -105,14 +105,14 @@ function parseInt10(string) {
 
 function getComputedStyles(className) {
   const element = document.querySelector(`.${className}`);
-  if (!element == null){
+  if (element != null){
     return window.getComputedStyle(element);
   }
 }
 
 function getOuterHeight(className) {
   const elementStyles = getComputedStyles(className);
-  if (!elementStyles == null) {
+  if (elementStyles != null) {
     const elementHeight = parseInt10(elementStyles.height);
     const elementMarginTop = parseInt10(elementStyles.marginTop);
     const elementMarginBottom = parseInt10(elementStyles.marginBottom);
