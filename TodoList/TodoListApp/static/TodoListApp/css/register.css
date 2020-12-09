@@ -1,3 +1,7 @@
+.header {
+  margin-top: 40px;
+}
+
 .main-register .register-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24,6 +28,7 @@
   color: #9b4848;
   list-style-type: none;
   border-radius: 10px;
+  cursor: default;
 }
 .main-register .register-form input {
   width: 100%;

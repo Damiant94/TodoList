@@ -32,6 +32,7 @@
 html {
   overflow-y: scroll;
   position: relative;
+  min-height: 101vh;
 }
 html body {
   width: 100%;
@@ -55,19 +56,16 @@ html body {
 html body .nav {
   position: fixed;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   top: 0;
   z-index: 10;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-}
-html body .nav .ul {
-  display: flex;
-  flex-direction: row;
   list-style-type: none;
   z-index: 20;
 }
-html body .nav .ul .li {
+html body .nav .li {
   padding: 10px;
   font-size: 30px;
   transition: all 0.5s;
@@ -79,16 +77,16 @@ html body .nav .ul .li {
   margin-right: 5px;
   border-radius: 10px;
 }
-html body .nav .ul .li a {
+html body .nav .li a {
   outline: none;
 }
-html body .nav .ul .li:hover {
+html body .nav .li:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-html body .nav .ul .li:active {
+html body .nav .li:active {
   background-color: rgba(0, 0, 0, 0);
 }
-html body .nav .ul .li:disabled {
+html body .nav .li:disabled {
   background-color: rgba(0, 0, 0, 0);
   cursor: auto;
   color: grey;
@@ -110,9 +108,10 @@ html body .container {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 600px;
-  min-height: 800px;
-  padding: 50px;
+  width: 80%;
+  min-width: 500px;
+  min-height: 826px;
+  padding: 50px 0;
   margin: 100px;
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/cork.jpg);
   background-size: 400px 400px;
@@ -138,6 +137,7 @@ html body .header {
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 10px;
+  cursor: default;
 }
 html body .header h1 {
   overflow-wrap: break-word;
@@ -166,6 +166,7 @@ html body .footer {
   bottom: 0;
   font-size: 28px;
   background-color: rgba(0, 0, 0, 0.9);
+  cursor: default;
 }
 html body .footer .hidden {
   opacity: 0;

@@ -7,29 +7,25 @@
   <title>Items</title>
 {% endblock %}
 
-{% block loader %}
+{% block body %}
   <div id="loader-wrapper">
     <div id="loader"></div>
     <div class="section-left"></div>
     <div class="section-right"></div>
   </div>
-{% endblock %}
 
-{% block body %}
   <nav class="nav">
-    <div class="ul">
-      <a href="{% url 'newitem' %}">
-        <div class="li">Add new item</div>
-      </a>
-      <form action="{% url 'items' %}" method="post">
-        {% csrf_token %}
-        <button class="add-10-items li" value="add-10-items" name="add-10-items">add 10 items</button>
-        <button disabled class="confirm-delete-button li" value="" name="confirm-delete-button">confirm deleting</button>
-      </form>
-      <a href="{% url 'logout' %}">
-        <div class="li">Logout</div>
-      </a>
-    </div>
+    <a href="{% url 'newitem' %}">
+      <div class="li">Add new item</div>
+    </a>
+    <form action="{% url 'items' %}" method="post">
+      {% csrf_token %}
+      <button class="add-10-items li" value="add-10-items" name="add-10-items">add 10 items</button>
+      <button disabled class="confirm-delete-button li" value="" name="confirm-delete-button">confirm deleting</button>
+    </form>
+    <a href="{% url 'logout' %}">
+      <div class="li">Logout</div>
+    </a>
   </nav>
 
   <div class="container container-items">
@@ -43,4 +39,5 @@
   </div>
 
   <script src="{% static 'TodoListApp/js/items.js' %}"></script>
+  <script src="{% static 'TodoListApp/js/loader.js' %}"></script>
 {% endblock %}

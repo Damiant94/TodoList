@@ -30,6 +30,7 @@
 html {
   overflow-y: scroll;
   position: relative;
+  min-height: 101vh;
 
   body {
     width: 100%;
@@ -53,48 +54,44 @@ html {
     .nav {
       position: fixed;
       display: flex;
+      flex-direction: row;
       justify-content: center;
       top: 0;
       z-index: 10;
       width: 100%;
       background-color: rgba(0, 0, 0, 0.8);
-    
-      .ul {
-        display: flex;
-        flex-direction: row;
-        list-style-type: none;
+      list-style-type: none;
+      z-index: 20;
+  
+      .li {
+        padding: 10px;
+        font-size: 30px;
+        transition: all 0.5s;
+        border-bottom: 1px solid transparent;
         z-index: 20;
-    
-        .li {
-          padding: 10px;
-          font-size: 30px;
-          transition: all 0.5s;
-          border-bottom: 1px solid transparent;
-          z-index: 20;
-          margin-bottom: 5px;
-          margin-top: 5px;
-          margin-left: 5px;
-          margin-right: 5px;
-          border-radius: 10px;
-    
-          a {
-            outline: none;
-          }
+        margin-bottom: 5px;
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+        border-radius: 10px;
+  
+        a {
+          outline: none;
         }
-    
-        .li:hover {
-          background-color: rgba(0, 0, 0, 0.8);
-        }
-    
-        .li:active {
-          background-color: rgba(0, 0, 0, 0);
-        }
-    
-        .li:disabled {
-          background-color: rgba(0, 0, 0, 0);
-          cursor: auto;
-          color: grey;
-        }
+      }
+  
+      .li:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+  
+      .li:active {
+        background-color: rgba(0, 0, 0, 0);
+      }
+  
+      .li:disabled {
+        background-color: rgba(0, 0, 0, 0);
+        cursor: auto;
+        color: grey;
       }
     }
     
@@ -116,9 +113,10 @@ html {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      width: 600px;
-      min-height: 800px;
-      padding: 50px;
+      width: 80%;
+      min-width: 500px;
+      min-height: 826px;
+      padding: 50px 0;
       margin: 100px;
       background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/cork.jpg);
       background-size: 400px 400px;
@@ -145,6 +143,7 @@ html {
       padding-left: 15px;
       padding-right: 15px;
       border-radius: 10px;
+      cursor: default;
     
       h1 {
         overflow-wrap: break-word;
@@ -176,6 +175,7 @@ html {
       bottom: 0;
       font-size: 28px;
       background-color: rgba(0, 0, 0, 0.9);
+      cursor: default;
 
       .hidden {
         opacity: 0;

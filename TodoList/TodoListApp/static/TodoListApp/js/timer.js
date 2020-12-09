@@ -15,7 +15,6 @@ function timer() {
   let minutes = now.getMinutes()
   if (minutes < 10) minutes = minutes.toString().padStart(2, "0");
   let seconds = now.getSeconds()
-  // if (seconds < 10) seconds = `0${seconds}`;
   if (seconds < 10) seconds = seconds.toString().padStart(2, "0");
   const timer = document.querySelector(".timer")
   timer.innerText = `${day}/${month}/${year} | ${hours}:${minutes}:${seconds}`;

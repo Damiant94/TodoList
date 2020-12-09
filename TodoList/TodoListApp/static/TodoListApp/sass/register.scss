@@ -1,4 +1,8 @@
 
+.header {
+  margin-top: 40px;
+}
+
 .main-register {
 
   .register-form {
@@ -28,7 +32,7 @@
       color: rgb(155, 72, 72);
       list-style-type: none;
       border-radius: 10px;
-
+      cursor: default;
     }
 
     input {
