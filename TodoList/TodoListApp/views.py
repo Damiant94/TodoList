@@ -41,8 +41,11 @@ def items_view(request):
 
   if request.method == "POST":
     if (request.POST.get("add-10-items")):
-      for i in [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]:
-        item = Item(user=request.user, name=f"name{i}", details=f"details{i}", date="2018-07-22")
+      name = "Battle of Grunwald"
+      details = "The Battle of Grunwald, Battle of Žalgiris or First Battle of Tannenberg was fought on 15 July 1410 during the Polish–Lithuanian–Teutonic War. The alliance of the Crown of the Kingdom of Poland and the Grand Duchy of Lithuania, led respectively by King Władysław II Jagiełło (Jogaila) and Grand Duke Vytautas, decisively defeated the German–Prussian Teutonic Knights, led by Grand Master Ulrich von Jungingen. Most of the Teutonic Knights' leadership were killed or taken prisoner. Although defeated, the Teutonic Knights withstood the siege of their fortress in Marienburg (Malbork) and suffered minimal territorial losses at the Peace of Thorn (1411) (Toruń), with other territorial disputes continuing until the Peace of Melno in 1422. The knights, however, would never recover their former power, and the financial burden of war reparations caused internal conflicts and an economic downturn in the lands under their control. The battle shifted the balance of power in Central and Eastern Europe and marked the rise of the Polish–Lithuanian union as the dominant political and military force in the region."
+      date = "1410-07-15"
+      for i in range(10):
+        item = Item(user=request.user, name=name, details=details, date=date)
         item.is_active = True
         item.save()
       return HttpResponseRedirect(reverse("items"))
