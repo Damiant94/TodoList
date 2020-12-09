@@ -6,8 +6,8 @@ from .forms import UserCreateForm
 from .models import Item
 import time
 
-import logging
-logger = logging.getLogger(__name__)
+# import logging
+# logger = logging.getLogger(__name__)
 
 
 # Create your views here.
@@ -68,8 +68,6 @@ def itemslist_api(request):
   items = list(Item.objects.filter(user=request.user.id).values())
   items.reverse()
   data = items[start:end+1]
-
-  logger.error(request.user.username)
 
   time.sleep(1)
   return JsonResponse({

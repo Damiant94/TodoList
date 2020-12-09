@@ -5,10 +5,10 @@ let counter = 0;
 // Load 3 items at a time
 const QUANTITY_TO_ADD_ON_SCROLL = 3;
 
-var isListEmpty = true;
-var removed = [];
-var areMoreItems = true;
-var enabledActions = true;
+let isListEmpty = true;
+let removed = [];
+let areMoreItems = true;
+let enabledActions = true;
 
 const HIDE_ANIMATION_DURATION_OPACITY = 1500
 const HIDE_ANIMATION_DURATION_ALL = 2000;

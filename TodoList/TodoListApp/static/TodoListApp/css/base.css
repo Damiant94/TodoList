@@ -48,7 +48,7 @@ html body {
   align-items: center;
   color: #fff;
   font-family: "Caveat", cursive;
-  background: linear-gradient(rgba(248, 111, 111, 0.1), rgba(248, 111, 111, 0.1)), url(img/geometry.png);
+  background: linear-gradient(rgba(248, 111, 111, 0.1), rgba(248, 111, 111, 0.1)), url(../img/geometry.png);
   background-size: 400px 400px;
   z-index: -1;
 }
@@ -114,7 +114,7 @@ html body .container {
   min-height: 800px;
   padding: 50px;
   margin: 100px;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(img/cork1.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/cork.jpg);
   background-size: 400px 400px;
   image-rendering: -webkit-optimize-contrast;
 }

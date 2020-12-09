@@ -46,7 +46,7 @@ html {
             align-items: center;
     color: #fff;
     font-family: 'Caveat', cursive;
-    background: linear-gradient(rgb(248, 111, 111, 0.1), rgba(248, 111, 111, 0.1)), url(img/geometry.png);
+    background: linear-gradient(rgb(248, 111, 111, 0.1), rgba(248, 111, 111, 0.1)), url(../img/geometry.png);
     background-size: 400px 400px;
     z-index: -1;
 
@@ -120,10 +120,7 @@ html {
       min-height: 800px;
       padding: 50px;
       margin: 100px;
-      background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(img/cork1.jpg);
-      // background-color: rgba(0, 0, 0, 0.8);
-      // background: url(img/cork1.jpg);
-      // filter: grayscale(50%);
+      background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/cork.jpg);
       background-size: 400px 400px;
       image-rendering: -webkit-optimize-contrast;
     }
@@ -196,10 +193,5 @@ html {
     }
   }
 }
-
-
-
-
-
 
 /*# sourceMappingURL=style.css.map */
