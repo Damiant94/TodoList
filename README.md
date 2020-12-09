@@ -20,8 +20,11 @@ Project created with:
 
 ## Features
 My Todo List app contains features such as:
-* User Autenthication (Sign up, Login, Logout)
+* User Authenthication (Sign up, Login, Logout)
 * User's tasks stored in database 
 * Easily addable and removable items
+* Items fetched by api
+* Infinite scroll in items view
+* Loading animation on items view
 * User-friendly
 * Time and date in footer
