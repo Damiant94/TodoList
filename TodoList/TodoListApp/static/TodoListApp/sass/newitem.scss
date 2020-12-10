@@ -1,4 +1,3 @@
-
 .main-new-item {
   width: 100%;
 
@@ -8,8 +7,8 @@
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     color: #000;
     width: 400px;
     margin-bottom: 20px;
@@ -29,19 +28,19 @@
       display: flex;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
 
       .todo-item-name-input {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: flex-start;
+        -ms-flex-pack: center;
+        justify-content: flex-start;
         -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
         margin-bottom: 10px;
         height: 40px;
         padding: 5px;
@@ -57,10 +56,10 @@
         border: none;
         background-color: rgba(0, 0, 0, 0.05);
         border-radius: 10px;
-        font-family: 'Caveat', cursive;
+        font-family: "Caveat", cursive;
         font-weight: bold;
       }
-  
+
       label {
         font-size: 22px;
         margin-bottom: 3px;
@@ -83,9 +82,9 @@
         background-color: transparent;
         background-color: rgba(0, 0, 0, 0.05);
         border-radius: 10px;
-        font-family: 'Caveat', cursive;
+        font-family: "Caveat", cursive;
       }
-    
+
       .date-input {
         margin-bottom: 10px;
         height: 30px;
@@ -99,7 +98,7 @@
         margin-right: 140px;
         background-color: rgba(0, 0, 0, 0.05);
         border-radius: 10px;
-        font-family: 'Caveat', cursive;
+        font-family: "Caveat", cursive;
         font-size: 20px;
         cursor: pointer;
       }
@@ -107,7 +106,7 @@
       input:hover,
       input:focus,
       textarea:hover,
-      textarea:focus{
+      textarea:focus {
         background-color: rgba(0, 0, 0, 0.1);
       }
 
@@ -121,7 +120,7 @@
         cursor: pointer;
         background-color: #fff;
         border-radius: 30px;
-        font-family: 'Caveat', cursive;
+        font-family: "Caveat", cursive;
         outline: none;
       }
 
@@ -137,42 +136,39 @@
 }
 
 @media screen and (max-width: 500px) {
-html {
-  body {
-    .container {
+  html {
+    body {
+      .container {
+        .main-new-item {
+          .new-todo-item {
+            width: 100%;
+            background-size: 80% 400px;
+            padding: 20px;
 
-      .main-new-item {  
-        .new-todo-item {
-          width: 100%;
-          background-size: 80% 400px;
-          padding: 20px;
+            form {
+              padding-top: 20px;
 
-          form {
-            padding-top: 20px;
-
-            input,
-            textarea,
-            label,
-            .submit {
-              margin-left: 12vw;
-              margin-right: 14vw;
-              font-size: 4vw;
-            }
-            .submit {
-              max-width: 50%;
+              input,
+              textarea,
+              label,
+              .submit {
+                margin-left: 12vw;
+                margin-right: 14vw;
+                font-size: 4vw;
+              }
+              .submit {
+                max-width: 50%;
+              }
             }
           }
         }
-      }
-    
-      .header {
-        h1 {
-          font-size: 6vw;
+
+        .header {
+          h1 {
+            font-size: 6vw;
+          }
         }
       }
-      
     }
   }
-}
-
 }

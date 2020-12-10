@@ -1,21 +1,19 @@
-
 .header {
   margin-top: 40px;
 }
 
 .main-register {
-
   .register-form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin-top: 50px;
     width: 250px;
     margin-bottom: 30px;
@@ -45,7 +43,7 @@
       border: none;
       background-color: rgba(0, 0, 0, 0.3);
       border-radius: 10px;
-      font-family: 'Caveat', cursive;
+      font-family: "Caveat", cursive;
       color: #fff;
       transition: all 0.5s;
       text-align: center;
@@ -69,7 +67,7 @@
       transition: all 0.5s;
       cursor: pointer;
       align-self: center;
-      font-family: 'Caveat', cursive;
+      font-family: "Caveat", cursive;
       background-color: rgba(255, 255, 255, 0.8);
       color: #000;
     }
@@ -104,12 +102,11 @@
 
 @media screen and (max-width: 500px) {
   html {
-  
     body {
       padding: 0;
       padding-top: 20px;
       min-height: auto;
-  
+
       .header {
         margin-top: 0;
         margin-bottom: 0;
@@ -117,29 +114,29 @@
           font-size: 8vw !important;
         }
       }
-  
+
       .container {
         min-height: auto;
         margin-top: 0;
         margin-bottom: 0;
-  
+
         .main-register {
           .register-form {
             display: flex;
             justify-content: center;
             width: 80%;
-  
+
             input {
               width: 100%;
               font-size: 6vw;
             }
-  
+
             .submit {
               width: 50%;
             }
           }
-  
-          .back-to-login{
+
+          .back-to-login {
             width: 100%;
             margin: 0 !important;
             font-size: 5vw;
@@ -149,4 +146,4 @@
       }
     }
   }
-  }
+}

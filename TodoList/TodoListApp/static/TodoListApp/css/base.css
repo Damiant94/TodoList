@@ -133,6 +133,8 @@ html body .header {
   min-height: 60px;
   text-align: center;
   margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.4);
   padding-left: 15px;
@@ -141,6 +143,8 @@ html body .header {
   cursor: default;
 }
 html body .header h1 {
+  display: inline-block;
+  word-break: break-word;
   overflow-wrap: break-word;
   font-size: 42px;
   font-weight: bold;

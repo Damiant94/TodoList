@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import dj_database_url
 from pathlib import Path
 import os
 
@@ -18,7 +19,7 @@ import os
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))
-STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 
 # Extra lookup directories for collectstatic to find static files
@@ -44,8 +45,8 @@ SECRET_KEY = '%z=^mm68onfoa3kyn#z9_b*!cf#zn)e4^nro%**78=re1d%8z2'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-  'awesome-todo-list.herokuapp.com',
-  '127.0.0.1']
+    'awesome-todo-list.herokuapp.com',
+    '127.0.0.1']
 
 
 # Application definition
@@ -142,7 +143,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-import dj_database_url 
-prod_db  =  dj_database_url.config(conn_max_age=500)
+prod_db = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
-
