@@ -1,5 +1,6 @@
 
 .main-new-item {
+  width: 100%;
 
   .new-todo-item {
     display: -webkit-box;
@@ -17,6 +18,8 @@
     padding: 40px;
     padding-top: 60px;
     background-image: url(../img/sticky2.png);
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: 400px 430px;
     opacity: 0.9;
 
@@ -131,4 +134,45 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 500px) {
+html {
+  body {
+    .container {
+
+      .main-new-item {  
+        .new-todo-item {
+          width: 100%;
+          background-size: 80% 400px;
+          padding: 20px;
+
+          form {
+            padding-top: 20px;
+
+            input,
+            textarea,
+            label,
+            .submit {
+              margin-left: 12vw;
+              margin-right: 14vw;
+              font-size: 4vw;
+            }
+            .submit {
+              max-width: 50%;
+            }
+          }
+        }
+      }
+    
+      .header {
+        h1 {
+          font-size: 6vw;
+        }
+      }
+      
+    }
+  }
+}
+
 }

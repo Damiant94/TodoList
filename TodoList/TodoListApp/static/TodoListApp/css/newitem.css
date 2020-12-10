@@ -1,3 +1,6 @@
+.main-new-item {
+  width: 100%;
+}
 .main-new-item .new-todo-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,6 +17,8 @@
   padding: 40px;
   padding-top: 60px;
   background-image: url(../img/sticky2.png);
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: 400px 430px;
   opacity: 0.9;
 }
@@ -118,6 +123,31 @@
 }
 .main-new-item .new-todo-item form .submit:active {
   transform: translateY(0);
+}
+
+@media screen and (max-width: 500px) {
+  html body .container .main-new-item .new-todo-item {
+    width: 100%;
+    background-size: 80% 400px;
+    padding: 20px;
+  }
+  html body .container .main-new-item .new-todo-item form {
+    padding-top: 20px;
+  }
+  html body .container .main-new-item .new-todo-item form input,
+html body .container .main-new-item .new-todo-item form textarea,
+html body .container .main-new-item .new-todo-item form label,
+html body .container .main-new-item .new-todo-item form .submit {
+    margin-left: 12vw;
+    margin-right: 14vw;
+    font-size: 4vw;
+  }
+  html body .container .main-new-item .new-todo-item form .submit {
+    max-width: 50%;
+  }
+  html body .container .header h1 {
+    font-size: 6vw;
+  }
 }
 
 /*# sourceMappingURL=newitem.css.map */

@@ -9,14 +9,12 @@
 {% block body %}
 
   <nav class="nav">
-    <div class="ul">
-      <a href="{% url 'items' %}">
-        <div class="li">Show list of items</div>
-      </a>
-      <a href="{% url 'logout' %}">
-        <div class="li">Logout</div>
-      </a>
-    </div>
+    <a href="{% url 'items' %}">
+      <div class="li">Show list of items</div>
+    </a>
+    <a href="{% url 'logout' %}">
+      <div class="li">Logout</div>
+    </a>
   </nav>
 
   <div class="container container-new">

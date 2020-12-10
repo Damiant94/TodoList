@@ -90,4 +90,42 @@
   transform: translateY(0);
 }
 
+@media screen and (max-width: 500px) {
+  html body {
+    padding: 0;
+    padding-top: 20px;
+    min-height: auto;
+  }
+  html body .header {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  html body .header h1 {
+    font-size: 8vw !important;
+  }
+  html body .container {
+    min-height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  html body .container .main-register .register-form {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+  }
+  html body .container .main-register .register-form input {
+    width: 100%;
+    font-size: 6vw;
+  }
+  html body .container .main-register .register-form .submit {
+    width: 50%;
+  }
+  html body .container .main-register .back-to-login {
+    width: 100%;
+    margin: 0 !important;
+    font-size: 5vw;
+    text-align: center;
+  }
+}
+
 /*# sourceMappingURL=register.css.map */

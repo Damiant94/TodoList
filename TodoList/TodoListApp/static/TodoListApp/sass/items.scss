@@ -1,5 +1,12 @@
 
+
 .nav {
+  .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
   .li {
     background-color: transparent;
     border: none;
@@ -9,12 +16,10 @@
     outline: none;
   }
 
-  form {
-    display: flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    flex-direction: row;
-  }
+}
+
+.header {
+  width: 80%;
 }
 
 .main-items {
@@ -49,6 +54,8 @@
     -webkit-animation-play-state: paused;
             animation-play-state: paused;
     background-image: url(../img/sticky1.png);
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: 400px 300px;
     line-height: 100%;
 
@@ -159,4 +166,34 @@
   100% {
     opacity: 0;
   }
+}
+
+@media screen and (max-width: 500px) {
+html {
+  body {
+    .main-items {  
+      .todo-item {
+        background-size: 80% 300px;
+        padding-left: 40px;
+        padding-right: 40px;
+  
+      .todo-item-name {
+        margin-left: 30px;
+      }
+  
+      .details {
+        margin-left: 30px;
+      }
+  
+      }
+    }
+
+    .header {
+      h1 {
+        font-size: 6vw;
+      }
+    }
+  }
+}
+
 }
