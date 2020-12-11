@@ -12,6 +12,13 @@
     <header class="header">
       <h1>Welcome to<br> <span class="title">Awesome Todo List.</span> <br>Please log in.</h1>
     </header>
+
+    <aside class="info left-info">
+    </aside>
+
+    <aside class="info right-info">
+    </aside>
+
     <main class="main main-login">
 
       <form class="login-form" action="{% url 'login' %}" method="post">
@@ -33,6 +40,7 @@
 
     </main>
   </div>
+  <script src="{% static 'TodoListApp/js/start-info.js' %}"></script>
 
 
 {% endblock %}

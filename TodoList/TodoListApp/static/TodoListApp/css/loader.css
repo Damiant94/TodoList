@@ -1,39 +1,41 @@
+/* line 2, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/loader.scss */
 .loaded #loader {
   opacity: 0;
   -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
+  transition: all 0.3s ease-out; }
+
+/* line 8, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/loader.scss */
 .loaded #loader-wrapper {
   visibility: hidden;
   -webkit-transition: all 0.3s 0.6s ease-out;
-  transition: all 0.3s 0.6s ease-out;
-}
-.loaded #loader-wrapper .section-right,
-.loaded #loader-wrapper .section-left {
-  -webkit-transition: all 3s 0.3s ease-out;
-  transition: all 3s 0.3s ease-out;
-}
-.loaded #loader-wrapper .section-left {
-  -webkit-transform: translateX(-100%);
-  /* Chrome, Opera 15+, Safari 3.1+ */
-  -ms-transform: translateX(-100%);
-  /* IE 9 */
-  transform: translateX(-100%);
-  /* Firefox 16+, IE 10+, Opera */
-  -webkit-transition: all 1s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 1s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-.loaded #loader-wrapper .section-right {
-  -webkit-transform: translateX(100%);
-  /* Chrome, Opera 15+, Safari 3.1+ */
-  -ms-transform: translateX(100%);
-  /* IE 9 */
-  transform: translateX(100%);
-  /* Firefox 16+, IE 10+, Opera */
-  -webkit-transition: all 1s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 1s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
+  transition: all 0.3s 0.6s ease-out; }
+  /* line 14, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/loader.scss */
+  .loaded #loader-wrapper .section-right,
+  .loaded #loader-wrapper .section-left {
+    -webkit-transition: all 3s 0.3s ease-out;
+    transition: all 3s 0.3s ease-out; }
+  /* line 20, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/loader.scss */
+  .loaded #loader-wrapper .section-left {
+    -webkit-transform: translateX(-100%);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(-100%);
+    /* IE 9 */
+    transform: translateX(-100%);
+    /* Firefox 16+, IE 10+, Opera */
+    -webkit-transition: all 1s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 1s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); }
+  /* line 29, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/loader.scss */
+  .loaded #loader-wrapper .section-right {
+    -webkit-transform: translateX(100%);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(100%);
+    /* IE 9 */
+    transform: translateX(100%);
+    /* Firefox 16+, IE 10+, Opera */
+    -webkit-transition: all 1s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 1s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); }
 
+/* line 41, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/loader.scss */
 #loader-wrapper #loader {
   display: block;
   position: fixed;
@@ -49,8 +51,9 @@
   /* Chrome, Opera 15+, Safari 5+ */
   animation: spin 2s linear infinite;
   /* Chrome, Firefox 16+, IE 10+, Opera */
-  z-index: 1001;
-}
+  z-index: 1001; }
+
+/* line 59, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/loader.scss */
 #loader-wrapper #loader:before {
   content: "";
   position: absolute;
@@ -64,8 +67,9 @@
   -webkit-animation: spin 3s linear infinite;
   /* Chrome, Opera 15+, Safari 5+ */
   animation: spin 3s linear infinite;
-  /* Chrome, Firefox 16+, IE 10+, Opera */
-}
+  /* Chrome, Firefox 16+, IE 10+, Opera */ }
+
+/* line 74, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/loader.scss */
 #loader-wrapper #loader:after {
   content: "";
   position: absolute;
@@ -79,8 +83,8 @@
   -webkit-animation: spin 1.5s linear infinite;
   /* Chrome, Opera 15+, Safari 5+ */
   animation: spin 1.5s linear infinite;
-  /* Chrome, Firefox 16+, IE 10+, Opera */
-}
+  /* Chrome, Firefox 16+, IE 10+, Opera */ }
+
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -88,17 +92,15 @@
     -ms-transform: rotate(0deg);
     /* IE 9 */
     transform: rotate(0deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
+    /* Firefox 16+, IE 10+, Opera */ }
   100% {
     -webkit-transform: rotate(360deg);
     /* Chrome, Opera 15+, Safari 3.1+ */
     -ms-transform: rotate(360deg);
     /* IE 9 */
     transform: rotate(360deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-}
+    /* Firefox 16+, IE 10+, Opera */ } }
+
 @keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -106,18 +108,17 @@
     -ms-transform: rotate(0deg);
     /* IE 9 */
     transform: rotate(0deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
+    /* Firefox 16+, IE 10+, Opera */ }
   100% {
     -webkit-transform: rotate(360deg);
     /* Chrome, Opera 15+, Safari 3.1+ */
     -ms-transform: rotate(360deg);
     /* IE 9 */
     transform: rotate(360deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-}
-#loader-wrapper .section-right, #loader-wrapper .section-left {
+    /* Firefox 16+, IE 10+, Opera */ } }
+
+/* line 114, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/loader.scss */
+#loader-wrapper .section-left, #loader-wrapper .section-right {
   position: fixed;
   top: 0;
   width: 51%;
@@ -129,13 +130,14 @@
   -ms-transform: translateX(0);
   /* IE 9 */
   transform: translateX(0);
-  /* Firefox 16+, IE 10+, Opera */
-}
+  /* Firefox 16+, IE 10+, Opera */ }
+
+/* line 126, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/loader.scss */
 #loader-wrapper .section-left {
-  left: 0;
-}
+  left: 0; }
+
+/* line 131, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/loader.scss */
 #loader-wrapper .section-right {
-  right: 0;
-}
+  right: 0; }
 
 /*# sourceMappingURL=loader.css.map */

@@ -243,4 +243,29 @@ html {
   }
 }
 
+@media screen and (max-height: 500px) {
+  html {
+    body {
+      .footer{
+        // display: none;
+        padding: 10px;
+        font-size: 10px;
+
+        .author{
+          .created-by {
+            font-size: 10px;
+          }
+        }
+
+
+        .timer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

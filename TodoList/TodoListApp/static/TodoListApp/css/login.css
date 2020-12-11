@@ -1,3 +1,7 @@
+.container {
+  position: relative;
+}
+
 .header {
   margin-top: 40px;
   padding: 10px;
@@ -7,6 +11,48 @@
   font-size: 55px;
 }
 
+.right-info, .left-info {
+  display: flex;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  height: 40%;
+  width: 30%;
+  opacity: 0.8;
+  bottom: 25%;
+  font-size: 70px;
+  justify-content: center;
+  animation-name: info;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.left-info {
+  left: 30px;
+  text-align: right;
+}
+
+.right-info {
+  right: 30px;
+}
+
+@keyframes info {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .main-login .login-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -140,6 +186,12 @@
   html body .container .main-login .message {
     margin-top: 20px;
     font-size: 4vw;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .info {
+    opacity: 1;
+    visibility: visible;
   }
 }
 

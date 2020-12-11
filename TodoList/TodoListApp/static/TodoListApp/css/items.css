@@ -1,21 +1,23 @@
+/* line 3, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/items.scss */
 .nav .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-}
+  display: flex; }
+
+/* line 9, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/items.scss */
 .nav .li {
   background-color: transparent;
   border: none;
   cursor: pointer;
   font-family: "Caveat", cursive;
   color: #fff;
-  outline: none;
-}
+  outline: none; }
 
+/* line 19, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/items.scss */
 .header {
-  width: 80%;
-}
+  width: 80%; }
 
+/* line 23, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/items.scss */
 .main-items {
   opacity: 0.9;
   display: -webkit-box;
@@ -23,119 +25,119 @@
   display: flex;
   flex-direction: row !important;
   justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-.main-items .todo-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  color: #000;
-  height: 300px;
-  width: 400px;
-  padding: 20px;
-  margin: 0 15px;
-  position: relative;
-  -webkit-animation-name: hide;
-  animation-name: hide;
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-play-state: paused;
-  animation-play-state: paused;
-  background-image: url(../img/sticky1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 400px 300px;
-  line-height: 100%;
-}
-.main-items .todo-item .todo-item-name {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: flex-start;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 10px;
-  margin-left: 40px;
-  margin-right: 25px;
-  height: 40px;
-  font-size: 25px;
-  font-weight: bold;
-  margin-top: 20px;
-  padding: 5px;
-  outline: none;
-  color: #000;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scroll-padding: 0;
-  scroll-margin: 0;
-  white-space: nowrap;
-  cursor: default;
-}
-.main-items .todo-item .details {
-  border-radius: 5px;
-  overflow-wrap: break-word;
-  overflow-y: auto;
-  height: 100px;
-  padding: 10px;
-  margin-left: 40px;
-  margin-right: 25px;
-  text-align: justify;
-  resize: none;
-  margin-bottom: 10px;
-  outline: none;
-  font-size: 22px;
-  scrollbar-width: thin;
-  scroll-padding: 0;
-  scroll-margin: 0;
-  cursor: default;
-}
-.main-items .todo-item .x-wrapper {
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin: 10px;
-  font-size: 20px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  cursor: pointer;
-  border: none;
-  color: #e9c1c1;
-  background-color: transparent;
-}
-.main-items .todo-item .x-wrapper:hover {
-  color: #fff;
-}
-.main-items .empty-list {
-  font-size: 44px;
-  margin-bottom: 40px;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  padding-right: 15px;
-  border-radius: 10px;
-  text-align: center;
-  pointer-events: none;
-}
-.main-items .todo-item label {
-  font-size: 20px;
-  margin-bottom: 2px;
-  margin-left: 40px;
-  margin-right: 25px;
-}
-.main-items .date {
-  text-align: right;
-  margin-right: 25px;
-  pointer-events: none;
-}
+  flex-wrap: wrap; }
+  /* line 32, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/items.scss */
+  .main-items .todo-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    color: #000;
+    height: 300px;
+    width: 400px;
+    padding: 20px;
+    margin: 0 15px;
+    position: relative;
+    -webkit-animation-name: hide;
+    animation-name: hide;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    background-image: url(../img/sticky1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px 300px;
+    line-height: 100%; }
+    /* line 60, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/items.scss */
+    .main-items .todo-item .todo-item-name {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: flex-start;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 10px;
+      margin-left: 40px;
+      margin-right: 25px;
+      height: 40px;
+      font-size: 25px;
+      font-weight: bold;
+      margin-top: 20px;
+      padding: 5px;
+      outline: none;
+      color: #000;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scroll-padding: 0;
+      scroll-margin: 0;
+      white-space: nowrap;
+      cursor: default; }
+    /* line 88, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/items.scss */
+    .main-items .todo-item .details {
+      border-radius: 5px;
+      overflow-wrap: break-word;
+      overflow-y: auto;
+      height: 100px;
+      padding: 10px;
+      margin-left: 40px;
+      margin-right: 25px;
+      text-align: justify;
+      resize: none;
+      margin-bottom: 10px;
+      outline: none;
+      font-size: 22px;
+      scrollbar-width: thin;
+      scroll-padding: 0;
+      scroll-margin: 0;
+      cursor: default; }
+    /* line 107, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/items.scss */
+    .main-items .todo-item .x-wrapper {
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin: 10px;
+      font-size: 20px;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+      color: #e9c1c1;
+      background-color: transparent; }
+    /* line 121, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/items.scss */
+    .main-items .todo-item .x-wrapper:hover {
+      color: #fff; }
+  /* line 126, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/items.scss */
+  .main-items .empty-list {
+    font-size: 44px;
+    margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    padding-right: 15px;
+    border-radius: 10px;
+    text-align: center;
+    pointer-events: none; }
+  /* line 137, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/items.scss */
+  .main-items .todo-item label {
+    font-size: 20px;
+    margin-bottom: 2px;
+    margin-left: 40px;
+    margin-right: 25px; }
+  /* line 144, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/items.scss */
+  .main-items .date {
+    text-align: right;
+    margin-right: 25px;
+    pointer-events: none; }
 
+/* line 151, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/items.scss */
 .load-more-items {
   width: 200px;
   height: 30px;
@@ -146,39 +148,35 @@
   font-family: "Caveat", cursive;
   font-size: 20px;
   transition: all 0.5s;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
+/* line 164, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/items.scss */
 .load-more-items:hover {
-  transform: translateY(-5px);
-}
+  transform: translateY(-5px); }
 
+/* line 168, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/items.scss */
 .load-more-items:disabled {
   transform: translateY(0);
   opacity: 0.8;
-  cursor: default;
-}
+  cursor: default; }
 
 @-webkit-keyframes hide {
   0% {
-    opacity: 1;
-  }
+    opacity: 1; }
   100% {
-    opacity: 0;
-  }
-}
+    opacity: 0; } }
+
 @keyframes hide {
   0% {
-    opacity: 1;
-  }
+    opacity: 1; }
   100% {
-    opacity: 0;
-  }
-}
+    opacity: 0; } }
+
 @media screen and (max-width: 500px) {
+  /* line 196, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/items.scss */
   html body .header h1 {
-    font-size: 6vw;
-  }
+    font-size: 6vw; }
+  /* line 202, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/items.scss */
   html body .main-items .todo-item {
     margin: 0;
     width: 100%;
@@ -186,29 +184,27 @@
     background-size: 100% 300px;
     padding-left: 12vw;
     padding-right: 12vw;
-    font-size: 5vw;
-  }
-  html body .main-items .todo-item .todo-item-name {
-    margin-left: 0;
-    margin-right: 0;
-    font-size: 5vw;
-    margin-bottom: 0;
-  }
-  html body .main-items .todo-item label {
-    font-size: 5vw;
-    margin-left: 7vw;
-  }
-  html body .main-items .todo-item .details {
-    margin-left: 0;
-    margin-right: 0;
-    font-size: 5vw;
-    overflow-x: hidden;
-  }
+    font-size: 5vw; }
+    /* line 211, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/items.scss */
+    html body .main-items .todo-item .todo-item-name {
+      margin-left: 0;
+      margin-right: 0;
+      font-size: 5vw;
+      margin-bottom: 0; }
+    /* line 218, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/items.scss */
+    html body .main-items .todo-item label {
+      font-size: 5vw;
+      margin-left: 7vw; }
+    /* line 223, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/items.scss */
+    html body .main-items .todo-item .details {
+      margin-left: 0;
+      margin-right: 0;
+      font-size: 5vw;
+      overflow-x: hidden; }
+  /* line 232, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/items.scss */
   html body .load-more-items {
     width: 60%;
     height: 30px;
-    font-size: calc(10px + 3vw);
-  }
-}
+    font-size: calc(10px + 3vw); } }
 
 /*# sourceMappingURL=items.css.map */

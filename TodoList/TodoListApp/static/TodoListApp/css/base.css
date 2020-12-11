@@ -217,6 +217,20 @@ html body .footer .time {
     min-width: 99%;
   }
 }
+@media screen and (max-height: 500px) {
+  html body .footer {
+    padding: 10px;
+    font-size: 10px;
+  }
+  html body .footer .author .created-by {
+    font-size: 10px;
+  }
+  html body .footer .timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 /*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=base.css.map */

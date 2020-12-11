@@ -1,7 +1,8 @@
+/* line 1, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/register.scss */
 .header {
-  margin-top: 40px;
-}
+  margin-top: 40px; }
 
+/* line 6, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/register.scss */
 .main-register .register-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,117 +16,115 @@
   justify-content: center;
   margin-top: 50px;
   width: 250px;
-  margin-bottom: 30px;
-}
-.main-register .register-form label {
-  font-size: 24px;
-  margin-bottom: 3px;
-}
-.main-register .register-form .errorlist {
-  font-size: 18px;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #9b4848;
-  list-style-type: none;
-  border-radius: 10px;
-  cursor: default;
-}
-.main-register .register-form input {
-  width: 100%;
-  height: 40px;
-  font-size: 28px;
-  margin-bottom: 12px;
-  padding: 10px;
-  outline: none;
-  border: none;
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  font-family: "Caveat", cursive;
-  color: #fff;
-  transition: all 0.5s;
-  text-align: center;
-}
-.main-register .register-form input:hover {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.main-register .register-form input:hover {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.main-register .register-form .submit {
-  padding: 0;
-  width: 70%;
-  margin-top: 20px;
-  font-size: 24px;
-  border: none;
-  border-radius: 20px;
-  transition: all 0.5s;
-  cursor: pointer;
-  align-self: center;
-  font-family: "Caveat", cursive;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #000;
-}
-.main-register .register-form .submit:hover {
-  transform: translateY(-5px);
-  background-color: rgba(255, 255, 255, 0.8);
-}
-.main-register .register-form .submit:active {
-  transform: translateY(0);
-  background-color: rgba(255, 255, 255, 0.8);
-}
+  margin-bottom: 30px; }
+  /* line 21, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/register.scss */
+  .main-register .register-form label {
+    font-size: 24px;
+    margin-bottom: 3px; }
+  /* line 26, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/register.scss */
+  .main-register .register-form .errorlist {
+    font-size: 18px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #9b4848;
+    list-style-type: none;
+    border-radius: 10px;
+    cursor: default; }
+  /* line 36, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/register.scss */
+  .main-register .register-form input {
+    width: 100%;
+    height: 40px;
+    font-size: 28px;
+    margin-bottom: 12px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    font-family: "Caveat", cursive;
+    color: #fff;
+    transition: all 0.5s;
+    text-align: center; }
+  /* line 52, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/register.scss */
+  .main-register .register-form input:hover {
+    background-color: rgba(0, 0, 0, 0.4); }
+  /* line 56, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/register.scss */
+  .main-register .register-form input:hover {
+    background-color: rgba(0, 0, 0, 0.4); }
+  /* line 60, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/register.scss */
+  .main-register .register-form .submit {
+    padding: 0;
+    width: 70%;
+    margin-top: 20px;
+    font-size: 24px;
+    border: none;
+    border-radius: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    align-self: center;
+    font-family: "Caveat", cursive;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000; }
+  /* line 75, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/register.scss */
+  .main-register .register-form .submit:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.8); }
+  /* line 80, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/register.scss */
+  .main-register .register-form .submit:active {
+    transform: translateY(0);
+    background-color: rgba(255, 255, 255, 0.8); }
 
+/* line 87, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/register.scss */
 .back-to-login {
   background-color: rgba(155, 72, 72, 0.8);
   border-radius: 20px;
   font-size: 20px;
   padding: 15px;
-  transition: all 0.5s;
-}
+  transition: all 0.5s; }
 
+/* line 95, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/register.scss */
 .back-to-login:hover {
-  transform: translateY(-5px);
-}
+  transform: translateY(-5px); }
 
+/* line 99, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/register.scss */
 .back-to-login:active {
-  transform: translateY(0);
-}
+  transform: translateY(0); }
 
 @media screen and (max-width: 500px) {
+  /* line 105, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/register.scss */
   html body {
     padding: 0;
     padding-top: 20px;
-    min-height: auto;
-  }
-  html body .header {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  html body .header h1 {
-    font-size: 8vw !important;
-  }
-  html body .container {
-    min-height: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  html body .container .main-register .register-form {
-    display: flex;
-    justify-content: center;
-    width: 80%;
-  }
-  html body .container .main-register .register-form input {
-    width: 100%;
-    font-size: 6vw;
-  }
-  html body .container .main-register .register-form .submit {
-    width: 50%;
-  }
-  html body .container .main-register .back-to-login {
-    width: 100%;
-    margin: 0 !important;
-    font-size: 5vw;
-    text-align: center;
-  }
-}
+    min-height: auto; }
+    /* line 110, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/register.scss */
+    html body .header {
+      margin-top: 0;
+      margin-bottom: 0; }
+      /* line 113, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/register.scss */
+      html body .header h1 {
+        font-size: 8vw !important; }
+    /* line 118, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/register.scss */
+    html body .container {
+      min-height: auto;
+      margin-top: 0;
+      margin-bottom: 0; }
+      /* line 124, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/register.scss */
+      html body .container .main-register .register-form {
+        display: flex;
+        justify-content: center;
+        width: 80%; }
+        /* line 129, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/register.scss */
+        html body .container .main-register .register-form input {
+          width: 100%;
+          font-size: 6vw; }
+        /* line 134, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/register.scss */
+        html body .container .main-register .register-form .submit {
+          width: 50%; }
+      /* line 139, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/register.scss */
+      html body .container .main-register .back-to-login {
+        width: 100%;
+        margin: 0 !important;
+        font-size: 5vw;
+        text-align: center; } }
 
 /*# sourceMappingURL=register.css.map */

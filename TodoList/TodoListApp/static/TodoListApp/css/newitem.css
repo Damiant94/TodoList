@@ -1,155 +1,154 @@
+/* line 1, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/newitem.scss */
 .main-new-item {
-  width: 100%;
-}
-.main-new-item .new-todo-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  color: #000;
-  width: 400px;
-  margin-bottom: 20px;
-  border-radius: 20px;
-  height: auto;
-  padding: 40px;
-  padding-top: 60px;
-  background-image: url(../img/sticky2.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 400px 430px;
-  opacity: 0.9;
-}
-.main-new-item .new-todo-item form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-.main-new-item .new-todo-item form .todo-item-name-input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: flex-start;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 10px;
-  height: 40px;
-  padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  outline: none;
-  overflow-y: auto;
-  text-align: left;
-  font-size: 24px;
-  margin-bottom: 12px;
-  margin-left: 5px;
-  margin-right: 10px;
-  border: none;
-  background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
-  font-family: "Caveat", cursive;
-  font-weight: bold;
-}
-.main-new-item .new-todo-item form label {
-  font-size: 22px;
-  margin-bottom: 3px;
-}
-.main-new-item .new-todo-item form .todo-item-details-input {
-  overflow-wrap: break-word;
-  overflow-y: auto;
-  height: 80px;
-  padding: 10px;
-  text-align: justify;
-  resize: none;
-  margin-bottom: 10px;
-  margin-left: 5px;
-  margin-right: 10px;
-  font-size: 22px;
-  outline: none;
-  border-radius: 0;
-  border: none;
-  background-color: transparent;
-  background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
-  font-family: "Caveat", cursive;
-}
-.main-new-item .new-todo-item form .date-input {
-  margin-bottom: 10px;
-  height: 30px;
-  padding: 0;
-  padding-left: 10px;
-  padding-right: 10px;
-  outline: none;
-  border: none;
-  background-color: transparent;
-  margin-left: 5px;
-  margin-right: 140px;
-  background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
-  font-family: "Caveat", cursive;
-  font-size: 20px;
-  cursor: pointer;
-}
-.main-new-item .new-todo-item form input:hover,
-.main-new-item .new-todo-item form input:focus,
-.main-new-item .new-todo-item form textarea:hover,
-.main-new-item .new-todo-item form textarea:focus {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.main-new-item .new-todo-item form .submit {
-  width: 100px;
-  height: 40px;
-  margin-top: 20px;
-  font-size: 24px;
-  border: none;
-  transition: all 0.5s;
-  cursor: pointer;
-  background-color: #fff;
-  border-radius: 30px;
-  font-family: "Caveat", cursive;
-  outline: none;
-}
-.main-new-item .new-todo-item form .submit:hover {
-  transform: translateY(-5px);
-}
-.main-new-item .new-todo-item form .submit:active {
-  transform: translateY(0);
-}
+  width: 100%; }
+  /* line 4, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/newitem.scss */
+  .main-new-item .new-todo-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    color: #000;
+    width: 400px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    height: auto;
+    padding: 40px;
+    padding-top: 60px;
+    background-image: url(../img/sticky2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px 430px;
+    opacity: 0.9; }
+    /* line 25, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/newitem.scss */
+    .main-new-item .new-todo-item form {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      /* line 34, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/newitem.scss */
+      .main-new-item .new-todo-item form .todo-item-name-input {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: flex-start;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 10px;
+        height: 40px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        outline: none;
+        overflow-y: auto;
+        text-align: left;
+        font-size: 24px;
+        margin-bottom: 12px;
+        margin-left: 5px;
+        margin-right: 10px;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        font-family: "Caveat", cursive;
+        font-weight: bold; }
+      /* line 63, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/newitem.scss */
+      .main-new-item .new-todo-item form label {
+        font-size: 22px;
+        margin-bottom: 3px; }
+      /* line 68, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/newitem.scss */
+      .main-new-item .new-todo-item form .todo-item-details-input {
+        overflow-wrap: break-word;
+        overflow-y: auto;
+        height: 80px;
+        padding: 10px;
+        text-align: justify;
+        resize: none;
+        margin-bottom: 10px;
+        margin-left: 5px;
+        margin-right: 10px;
+        font-size: 22px;
+        outline: none;
+        border-radius: 0;
+        border: none;
+        background-color: transparent;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        font-family: "Caveat", cursive; }
+      /* line 88, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/newitem.scss */
+      .main-new-item .new-todo-item form .date-input {
+        margin-bottom: 10px;
+        height: 30px;
+        padding: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        margin-left: 5px;
+        margin-right: 140px;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        font-family: "Caveat", cursive;
+        font-size: 20px;
+        cursor: pointer; }
+      /* line 106, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/newitem.scss */
+      .main-new-item .new-todo-item form input:hover,
+      .main-new-item .new-todo-item form input:focus,
+      .main-new-item .new-todo-item form textarea:hover,
+      .main-new-item .new-todo-item form textarea:focus {
+        background-color: rgba(0, 0, 0, 0.1); }
+      /* line 113, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/newitem.scss */
+      .main-new-item .new-todo-item form .submit {
+        width: 100px;
+        height: 40px;
+        margin-top: 20px;
+        font-size: 24px;
+        border: none;
+        transition: all 0.5s;
+        cursor: pointer;
+        background-color: #fff;
+        border-radius: 30px;
+        font-family: "Caveat", cursive;
+        outline: none; }
+      /* line 127, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/newitem.scss */
+      .main-new-item .new-todo-item form .submit:hover {
+        transform: translateY(-5px); }
+      /* line 131, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/newitem.scss */
+      .main-new-item .new-todo-item form .submit:active {
+        transform: translateY(0); }
 
 @media screen and (max-width: 500px) {
+  /* line 143, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/newitem.scss */
   html body .container .main-new-item .new-todo-item {
     width: 100%;
     height: 400px;
     background-size: 90% 400px;
-    padding: 20px;
-  }
-  html body .container .main-new-item .new-todo-item form {
-    margin-top: 40px;
-  }
-  html body .container .main-new-item .new-todo-item form input,
-html body .container .main-new-item .new-todo-item form textarea,
-html body .container .main-new-item .new-todo-item form label,
-html body .container .main-new-item .new-todo-item form .submit {
-    margin-left: 8vw;
-    margin-right: 12vw;
-    font-size: 4vw;
-  }
-  html body .container .main-new-item .new-todo-item form .submit {
-    max-width: 50%;
-    margin-top: 0;
-  }
+    padding: 20px; }
+    /* line 149, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/newitem.scss */
+    html body .container .main-new-item .new-todo-item form {
+      margin-top: 40px; }
+      /* line 152, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/newitem.scss */
+      html body .container .main-new-item .new-todo-item form input,
+      html body .container .main-new-item .new-todo-item form textarea,
+      html body .container .main-new-item .new-todo-item form label,
+      html body .container .main-new-item .new-todo-item form .submit {
+        margin-left: 8vw;
+        margin-right: 12vw;
+        font-size: 4vw; }
+      /* line 160, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/newitem.scss */
+      html body .container .main-new-item .new-todo-item form .submit {
+        max-width: 50%;
+        margin-top: 0; }
+  /* line 169, ../../../git/TodoList/TodoListApp/static/TodoListApp/sass/newitem.scss */
   html body .container .header h1 {
-    font-size: 10vw;
-  }
-}
+    font-size: 10vw; } }
 
 /*# sourceMappingURL=newitem.css.map */

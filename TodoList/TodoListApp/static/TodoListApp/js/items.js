@@ -29,6 +29,9 @@ function load(quantity) {
     .then((data) => {
       if (data.itemslist.length > 0) {
         data.itemslist.forEach(addItem);
+        if ((start === 0 && data.itemslist.length < 6) || (start !== 0 && data.itemslist.length < 3)) {
+          disableAddingMoreItems(); 
+        }
       } else {
         disableAddingMoreItems();
         if (start === 0) {
