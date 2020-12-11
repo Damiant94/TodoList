@@ -25,11 +25,11 @@
   animation-name: info;
   animation-duration: 4s;
   animation-iteration-count: infinite;
+  text-align: center;
 }
 
 .left-info {
   left: 30px;
-  text-align: right;
 }
 
 .right-info {
