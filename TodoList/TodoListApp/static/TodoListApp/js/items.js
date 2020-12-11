@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   addScrollDownListener();
   addDeleteItemListener();
   addConfirmDeleteButtonListener();
+  addLoadMoreItemsListener();
 });
 
 function load(quantity) {
@@ -29,12 +30,17 @@ function load(quantity) {
       if (data.itemslist.length > 0) {
         data.itemslist.forEach(addItem);
       } else {
-        areMoreItems = false;
+        disableAddingMoreItems();
         if (start === 0) {
           addEmptyListInfo();
         }
       }
     });
+}
+
+function disableAddingMoreItems() {
+  areMoreItems = false;
+  document.querySelector(".load-more-items").disabled = true;
 }
 
 function addEmptyListInfo() {
@@ -91,6 +97,13 @@ function addConfirmDeleteButtonListener() {
   confirmButton.addEventListener("click", () => {
     confirmButton.value = itemsIdsToBeRemoved.join();
   });
+}
+
+function addLoadMoreItemsListener() {
+  const loadButton = document.querySelector(".load-more-items")
+  loadButton.addEventListener("click", () => {
+    load(QUANTITY_TO_ADD_ON_SCROLL);
+  })
 }
 
 function isScrolledToBottom() {

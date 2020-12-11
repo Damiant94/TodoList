@@ -136,6 +136,29 @@
   pointer-events: none;
 }
 
+.load-more-items {
+  width: 200px;
+  height: 30px;
+  background-color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-family: "Caveat", cursive;
+  font-size: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.load-more-items:hover {
+  transform: translateY(-5px);
+}
+
+.load-more-items:disabled {
+  transform: translateY(0);
+  opacity: 0.8;
+  cursor: default;
+}
+
 @-webkit-keyframes hide {
   0% {
     opacity: 1;
@@ -153,19 +176,38 @@
   }
 }
 @media screen and (max-width: 500px) {
-  html body .main-items .todo-item {
-    background-size: 80% 300px;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-  html body .main-items .todo-item .todo-item-name {
-    margin-left: 30px;
-  }
-  html body .main-items .todo-item .details {
-    margin-left: 30px;
-  }
   html body .header h1 {
     font-size: 6vw;
+  }
+  html body .main-items .todo-item {
+    margin: 0;
+    width: 100%;
+    height: 300px;
+    background-size: 100% 300px;
+    padding-left: 12vw;
+    padding-right: 12vw;
+    font-size: 5vw;
+  }
+  html body .main-items .todo-item .todo-item-name {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 5vw;
+    margin-bottom: 0;
+  }
+  html body .main-items .todo-item label {
+    font-size: 5vw;
+    margin-left: 7vw;
+  }
+  html body .main-items .todo-item .details {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 5vw;
+    overflow-x: hidden;
+  }
+  html body .load-more-items {
+    width: 60%;
+    height: 30px;
+    font-size: calc(10px + 3vw);
   }
 }
 

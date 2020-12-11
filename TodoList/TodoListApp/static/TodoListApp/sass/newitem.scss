@@ -142,22 +142,24 @@
         .main-new-item {
           .new-todo-item {
             width: 100%;
-            background-size: 80% 400px;
+            height: 400px;
+            background-size: 90% 400px;
             padding: 20px;
 
             form {
-              padding-top: 20px;
+              margin-top: 40px;
 
               input,
               textarea,
               label,
               .submit {
-                margin-left: 12vw;
-                margin-right: 14vw;
+                margin-left: 8vw;
+                margin-right: 12vw;
                 font-size: 4vw;
               }
               .submit {
                 max-width: 50%;
+                margin-top: 0;
               }
             }
           }
@@ -165,7 +167,7 @@
 
         .header {
           h1 {
-            font-size: 6vw;
+            font-size: 10vw;
           }
         }
       }
