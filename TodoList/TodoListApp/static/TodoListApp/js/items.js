@@ -35,6 +35,7 @@ function load(quantity) {
           addEmptyListInfo();
         }
       }
+      document.body.className = "loaded";
     });
 }
 

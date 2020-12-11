@@ -1,5 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => {
+if (document.title !== "Items") {
+  window.addEventListener("load", () => {
     document.body.className = "loaded";
-  }, 1000);
-});
+  });
+}
+
