@@ -26,5 +26,4 @@ My Todo List app contains features such as:
 * Items fetched by api
 * Infinite scroll in items view
 * Loading animation on items view
-* User-friendly
 * Time and date in footer
